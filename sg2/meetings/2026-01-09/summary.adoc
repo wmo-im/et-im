@@ -30,8 +30,9 @@ This meeting focused on reviewing the CDMS Functional Requirements document stru
 
 * The functional requirements document is now hosted on GitHub in the WMO-IM organization: https://github.com/wmo-im/cdms-functional-requirements
 * Document source files are written in AsciiDoc format located in the 'standard' directory
-* The latest version of the compiled PDF will be available in the 'compiled' directory
-* PDF generation is currently manual but GitHub Actions automation is planned for automatic regeneration on merging of pull requests
+* The latest agreed draft of the compiled PDF will be available in the 'compiled' directory.
+* This will be managed via making a release and versioning (to be discussed at next meeting)
+* PDF generation is currently manual. This will be automated via a Github action.
 * Team members are requested to provide their GitHub handles/IDs to David for repository access
 * GitHub issues will be used to review and track changes to the document and to assign sections to team members
 * GitHub discussions can also be used for more general discussions and questions
