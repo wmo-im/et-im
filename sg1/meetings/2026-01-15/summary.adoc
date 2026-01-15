@@ -45,7 +45,7 @@ The repository is public (viewable by all), but contributors need a GitHub accou
 
 === 3. Review of Removed Definitions
 
-The team reviewed definitions that had been identified as unused in the manual:
+The team reviewed definitions that had been identified as unused in the manual. See https://github.com/wmo-im/et-im/issues/6[GitHub issue #6] for the full list of definitions and detailed discussion.
 
 ==== 3.1 Definitions to Retain
 
