@@ -30,10 +30,11 @@ This meeting focused on reviewing the CDMS Functional Requirements document stru
 
 * The functional requirements document is now hosted on GitHub in the WMO-IM organization: https://github.com/wmo-im/cdms-functional-requirements
 * Document source files are written in AsciiDoc format located in the 'standard' directory
-* Compiled PDFs are available in the 'compiled' directory
-* PDF generation is currently manual but GitHub Actions automation is planned for automatic regeneration
+* The latest version of the compiled PDF will be available in the 'compiled' directory
+* PDF generation is currently manual but GitHub Actions automation is planned for automatic regeneration on merging of pull requests
 * Team members are requested to provide their GitHub handles/IDs to David for repository access
-* GitHub issues will be used to track discussions, review comments, and section assignments
+* GitHub issues will be used to review and track changes to the document and to assign sections to team members
+* GitHub discussions can also be used for more general discussions and questions
 
 ==== 2.2.2 Terminology Note
 
@@ -129,7 +130,7 @@ Peter Thorne raised a question on governance and confirmation that software meet
 
 David Berry responded:
 
-* Abstract conformance tests are planned to included in document
+* Abstract conformance tests are planned to be included in document
 * The Task team on Open Source Software (TT-OSS) is looking at this issue, but in a broader / more generic sense. Similar questions exist for other requirements (e.g. WIS, first mile data exchange)
 * Issue is being addressed across multiple WMO initiatives
 * Complete answer not yet available but actively being worked on
@@ -161,7 +162,7 @@ David will provide example OGC documents showing:
 
 * Question of whether document can stand alone without test suite or if it should be included
 * Document could proceed without test suite, but including it would ensure requirements are implementable
-* Team will revisit feasibility at next meeting (January 23rd) after members have more time to consider
+* Team will revisit feasibility at next meeting (January 23rd) after seeing examples
 
 === 2.7 Review Process and Timeline
 
