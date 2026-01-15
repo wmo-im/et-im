@@ -1,0 +1,157 @@
+= Meeting Summary: Sub-group 1 - 2026-01-15
+:revdate: 2026-01-15
+
+== Attendees
+
+=== ET-IM Members
+
+* Ge Peng (Chair)
+* Alvaro Scardilli
+* Axel Andersson
+* Charlotte McBride
+* Etna Cervantes
+* William Wright
+
+=== Secretariat
+
+* David Berry
+* Xiaoxia Chen
+
+== Agenda
+
+. Review of definitions, starting with the removed definitions
+. Workplan up to end of March
+. Any other business
+
+== Discussion Summary
+
+=== 1. Background on Definitions
+
+David provided background on the regulatory nature of definitions in technical regulations, referencing WMO-No. 1127
+(Rules for Drafting Technical Regulations and Manuals). Key points:
+
+* Definitions have the same regulatory status as the provisions in which the defined terms are used
+* Only terms used in the manual's provisions should be included in the definitions section
+* Terms not used in provisions could potentially be included in a future guide document
+
+=== 2. GitHub for Issue Tracking
+
+The team has started using GitHub for:
+
+* Meeting notes (stored as AsciiDoc files in branches, approved via pull requests)
+* Issue tracking for document review tasks
+* Asynchronous discussion between meetings
+
+The repository is public (viewable by all), but contributors need a GitHub account to comment on issues.
+Team members who cannot or prefer not to use GitHub directly can email comments to David for inclusion.
+
+=== 3. Review of Removed Definitions
+
+The team reviewed definitions that had been identified as unused in the manual. See https://github.com/wmo-im/et-im/issues/6[GitHub issue #6] for the full list of definitions and detailed discussion.
+
+==== 3.1 Definitions to Retain
+
+* **Centennial Observing Station** - Chapter 5 covers station recognition for long-term observing stations. William will
+review the existing text to ensure the term is properly referenced.
+
+* **Climatological day** - William requested retention pending review against the handbook.
+
+==== 3.2 Definitions to Remove
+
+* **Attribution day** - Work in progress, not currently used
+
+* **Climate domain terms** (climate change, climate index, climate indicator, climate model, climate predictions,
+climate products, climate projections, climate simulation) - These relate to the broader climate domain and are not
+referenced in this edition. Could be included when the manual's scope is broadened in a future edition, or in a guide document.
+
+* **Climatological station types** (ordinary, principal, reference climatological station) - Reference climatological station is used in the Manual on WIGOS, not this manual.
+
+* **Data lifecycle terms** (data access, data analysis, data archival, data documentation, data exchange, data sharing,
+data governance, data integration, data integrity, data interoperability, data portability, data preservation, data
+quality terms) - Many are defined in the Guide to Information Management (WMO-No. 1061), which is already referenced
+in the manual. Peng will cross-reference against the stewardship maturity matrix to see if any need to be retained.
+
+* **Crowdsourced data** - Not used; externally sourced data is in the document. William suggested keeping only externally sourced data if one is needed.
+
+* **DOI (Digital Object Identifier)** - Not used in current text. WMO uses URI for identifiers; DOI is one of many URI schemes.
+
+* **Granular data, Network metadata** - Not used
+
+* **Provenance metadata** - Simplified to just "provenance" in the text
+
+==== 3.3 Discussion on Appendix for Unused Terms
+
+A discussion arose about whether to include commonly used but undefined terms in an appendix. Charlotte raised concerns
+about scope creep and questioned the practical purpose. The team agreed to follow the principle in WMO-1127: only include
+terms that have regulatory implications through use in provisions.
+
+=== 4. Workplan to End of March
+
+The team agreed on a biweekly meeting structure:
+
+* **Week 1**: Small core team meets to draft text and propose resolutions
+* **Week 2**: Full subgroup reviews and reaches consensus on proposed changes
+
+Goals:
+
+* Complete definition review
+* Have a good draft ready by end of March for external review by SC-MMO and SC-CLI, plus others.
+* Tom Kralidis (Chair, Expert Team on Metadata) will present on the WMO Core Metadata Profile in February - this is
+relevant to both subgroups regarding potential climate extensions to discovery metadata
+
+=== 5. Other Business
+
+* William will be unavailable for 1-2 meetings in February (travel to Fiji with Bureau's COSPAC project)
+* David has shared the draft Manual, including the Part II on marine cliamte data, with Secretariat colleagues
+supporting SC-MMO, plus Peng, Alvaro and Axel from this team.
+* Team members encouraged to engage with GitHub between meetings rather than waiting for meetings to raise issues
+
+== Decisions
+
+* Retain "Centennial Observing Station" and "Climatological day" definitions pending text review
+* Remove climate modelling/projection terms (not used in this edition)
+* Do not create a separate appendix for unused terms - follow WMO-1127 principle
+* Adopt GitHub for issue tracking and meeting notes
+* Implement biweekly meeting structure alternating between drafting team and full subgroup
+
+== Action Items
+
+[cols="3,2,1"]
+|===
+| Action | Owner | Due Date
+
+| Review Centennial Observing Station and climatological day text in Chapter 5/6; check if terms need to be added to provisions
+| William Wright
+| Next subgroup meeting
+
+|  https://github.com/wmo-im/et-im/issues/7[Cross-reference stewardship maturity matrix terms against Guide to Information Management]
+| Ge Peng
+| Next subgroup meeting
+
+| Check usage of crowdsourced vs externally sourced data in the manual
+| William Wright
+| Next subgroup meeting
+
+| Contact Yiming regarding meeting invites and GitHub access
+| David Berry
+| TBD
+
+| Draft list of issues to address over the next 10 weeks
+| David Berry
+| Next week
+
+| Add meeting discussion summary to GitHub issue
+| David Berry
+| This week
+
+| Provide GitHub handles to David (for those wanting to comment on issues)
+| All team members
+| TBD
+
+|===
+
+== Next Meeting
+
+* **Next week**: Small drafting group to continue work on definitions
+* **Following week (2 weeks)**: Full subgroup to reach consensus on definitions
+* **February**: Tom Kralidis presentation on WMO Core Metadata Profile (full ET-IM team)
