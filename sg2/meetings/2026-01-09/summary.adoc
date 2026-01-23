@@ -1,0 +1,266 @@
+= WORLD METEOROLOGICAL ORGANIZATION (WMO)
+
+INFCOM SC-IMT
+
+'''
+
+*Expert Team on Information Management* +
+Original Language: English
+
+*ET-IM-SG2 9th January 2026 Teleconference* +
+09 January 2026 12:00 – 13:30 UTC
+
+== 1. Participants
+
+*Chair:* Ian Edwards
+
+*Participants:* Ge Peng, Patrick Muimi, Xavier Perrot, Peter Thorne, Denis Stuber
+
+*Secretariat:* David Berry
+
+== 2. Summary
+
+=== 2.1 Overview
+
+This meeting focused on reviewing the CDMS Functional Requirements document structure, establishing the review process, and confirming the timeline for finalization by mid-2026.
+
+=== 2.2 Document Structure and Repository
+
+==== 2.2.1 Repository Location and Workflow
+
+* The functional requirements document is now hosted on GitHub in the WMO-IM organization: https://github.com/wmo-im/cdms-functional-requirements
+* Document source files are written in AsciiDoc format located in the 'standard' directory
+* The latest agreed draft of the compiled PDF will be available in the 'compiled' directory.
+* This will be managed via making a release and versioning (to be discussed at next meeting)
+* PDF generation is currently manual. This will be automated via a Github action.
+* Team members are requested to provide their GitHub handles/IDs to David for repository access
+* GitHub issues will be used to review and track changes to the document and to assign sections to team members
+* GitHub discussions can also be used for more general discussions and questions
+
+==== 2.2.2 Terminology Note
+
+* Source files in the repository use "clause" terminology while the PDF output refers to "chapters"
+* The numbering is consistent between both, so cross-referencing is straightforward
+* David will check the origin of "clause" terminology (likely inherited from OGC ModSpec and its dependence on ISO standards)
+* Renaming to "chapters" may be considered but is not a priority
+
+==== 2.2.3 Key Updates
+
+David Berry presented the following structural improvements:
+
+*Standards Alignment*
+
+* Document now follows OGC ModSpec standard for defining requirements and specifications
+* Conformance classes defined for testing purposes
+
+*Scope Expansion*
+
+* Enhanced scope section with clearer context and boundaries
+* Added system landscape and data flow diagrams showing:
+** Field observations from meteorological sensors
+** Data collection and processing systems
+** Flow to operational systems (NWP)
+** Flow to Climate Data Management System (CDMS)
+** Flow to WIS 2.0 for international data exchange
+* Explicit definitions of what is in-scope vs. out-of-scope
+
+*In-Scope Elements*
+
+* Quality control procedures specific to climate data requirements
+* Long-term data consistency
+* Homogenization processes
+* Data rescue activities
+* Station metadata management with focus on long-term consistency and provenance
+* Archive and preservation of datasets
+* Climate product generation
+* Data sharing through WIS 2.0, national networks, and international archives
+* Data lineage and provenance tracking
+
+*Out of Scope Elements*
+
+* Collection of observations from sensors
+* Real-time data collection
+* Time-critical data exchange
+* NWP (Numerical Weather Prediction) systems
+
+*System Architecture*
+
+* New diagrams showing key CDMS components:
+** User interface and API layers
+** Data ingestion systems
+** QC engine
+** Homogenization engine/services
+** Metadata management
+** Data stores
+** External system interactions
+* Note: Data collection and processing system positioning needs further work in diagrams
+
+*Document Organisation*
+
+* Functional requirements section
+* Non-functional requirements section
+* Test specifications (to be developed)
+* Appendices (to be developed)
+* Conformance chapter describing main conformance classes (to be developed)
+
+=== 2.3 Document Audience Clarification
+
+Ian raised a clarification about the document audience:
+
+* The document should clarify it defines requirements for CDMS developers, not requirements for WMO Member States directly
+* This is intended to assist developers and integrators, empowers users and assessors, enables interoperability
+* Issue created on GitHub to clarify this distinction
+* GitHub issue https://github.com/wmo-im/cdms-functional-requirements/issues/3[wmo-im/cdms-functional-requirements#3] created: "Chapter 1 - Clarify who the document is for and scope"
+
+=== 2.4 Quality Control Discussion
+
+Peter Thorne noted that some of the QC checks need to be conditional:
+
+* QC checks (e.g., wet bulb vs dry bulb temperature) can only apply when both variables are observed
+* Agreement that conditionals need to be added to requirements
+* Team members encouraged to create GitHub issues with comments and proposed changes
+* GitHub issue https://github.com/wmo-im/cdms-functional-requirements/issues/4[wmo-im/cdms-functional-requirements#4] created: "Section 6.2.3 - make QC checks conditional."
+
+=== 2.5 Certificate and Conformance Discussion
+
+Peter Thorne raised a question on governance and confirmation that software meets the requirements:
+
+* Who will certify/recognize that systems meet requirements?
+* Concern: Requirements without means of recognition/certification are incomplete
+* WMO should have mechanism to validate conformance
+
+David Berry responded:
+
+* Abstract conformance tests are planned to be included in document
+* The Task team on Open Source Software (TT-OSS) is looking at this issue, but in a broader / more generic sense. Similar questions exist for other requirements (e.g. WIS, first mile data exchange)
+* Issue is being addressed across multiple WMO initiatives
+* Complete answer not yet available but actively being worked on
+
+=== 2.6 Test Suite Discussion
+
+==== 2.6.1 Abstract Test Suite Inclusion
+
+* Document structure includes provision for test specifications
+* Discussion on whether to include full abstract test suite given timeline constraints
+* Ian noted: Time frame seems reasonable for finalizing document as-is, but needs more thought regarding full test suite inclusion
+
+==== 2.6.2 Test Suite Clarifications
+
+* Abstract test suite: Written specifications defining tests for conformance (not executable code)
+* Physical test suite: Actual executable code that can be run to test software
+* This document will focus on abstract test suite (written test specifications)
+* Physical test suite (executable code) is out of scope for this timeline
+
+==== 2.6.3 Action Item
+
+David will provide example OGC documents showing:
+
+* Documents with abstract test suites included
+* How test specifications are written and structured
+* This will help team understand what an abstract test suite looks like in written form
+
+==== 2.6.4 Decision Point
+
+* Question of whether document can stand alone without test suite or if it should be included
+* Document could proceed without test suite, but including it would ensure requirements are implementable
+* Team will revisit feasibility at next meeting (January 23rd) after seeing examples
+
+=== 2.7 Review Process and Timeline
+
+==== 2.7.1 Overall Timeline
+
+* INFCOM 4 session: November 2026
+* Final submission to INFCOM: Early September 2026
+* Final draft ready: End of June 2026 (accounting for summer availability), external review over July and August
+* Draft of all content (including abstract test suite): March/April 2026, ready for broader review.
+
+==== 2.7.2 Review Process Phases
+
+*Phase 1 (January - March): Internal Team Review*
+
+* Team members review document in detail
+* Identify sections requiring work
+* Make necessary revisions
+* Weekly or bi-weekly meetings as needed based on availability
+
+*Phase 2 (April): Broader Community Review*
+
+* Send draft to CDMS developers and wider WMO community
+* Collect feedback and comments
+
+*Phase 3 (May - June): Finalization*
+
+* Address review comments
+* Complete final revisions
+* Prepare for INFCOM submission
+
+==== 2.7.3 Immediate Review Period
+
+All team members are asked to:
+
+* Review the document thoroughly
+* Familiarize themselves with the structure and content
+* Identify areas where they can provide constructive feedback
+* Note sections that need changes or clarification
+* Be prepared to volunteer for leading specific section reviews
+
+==== 2.7.4 Issue Tracking Approach
+
+David will create GitHub issues for document management:
+
+* One issue per chapter initially
+* Sub-issues can be created for specific sections within chapters as discussions develop
+* Issues will be used to assign reviewers to specific sections
+* This approach avoids creating excessive tickets upfront while maintaining organization
+
+== 3. Key Decisions
+
+* Next meeting scheduled: Friday, January 23, 2026 at the same time (1200 – 1330 UTC)
+* Meeting format: Continue with Friday meetings for this subgroup (recognizing some members unavailable, but they'll receive meeting notes)
+* Review period: Two weeks from January 9th to January 23rd for initial document review
+* David will send meeting invite and ask attendees to explicitly accept to confirm availability
+* David will summarize this meeting and send to team along with link to GitHub repository
+* Full ET-IM meeting discussion postponed until after January 23rd subgroup meeting
+
+== 4. Action Items
+
+=== David Berry
+
+* Create meeting summary/notes from January 9th meeting
+* Create GitHub issues for each chapter of the document
+* Send message to Subgroup 2 requesting GitHub IDs
+* Send link to GitHub repository to all team members
+* Send meeting invite for January 23rd with explicit acceptance request
+* Provide example OGC documents showing abstract test suites
+* Add milestones to GitHub to track key dates
+
+=== Ian
+
+* Review feasibility of including full abstract test suite given timeline
+* Consider communicating with wider ETIM team about GitHub activity after initial two weeks
+
+=== All Team Members
+
+* Review CDMS functional requirements document over next two weeks
+* Familiarize with structure and content
+* Identify areas for constructive feedback and where things need changes
+* Provide GitHub IDs to David
+* Think about which sections to volunteer for detailed review
+* Be prepared at January 23rd meeting to discuss section assignments
+
+=== Ge Peng
+
+* Consider timing for full ET-IM meeting (likely mid-to-late February)
+
+== 5. Date and time of Next Meeting
+
+*Date:* Friday, January 23, 2026
+
+*Time:* 1200 – 1330 UTC
+
+*Purpose:*
+
+* Initial checkpoint on document review
+* Assign section leads/reviewers
+* Discuss sections team members want to focus on
+* Address any immediate questions or issues
