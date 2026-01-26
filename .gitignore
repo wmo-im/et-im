@@ -1,5 +1,9 @@
 .asciidoctor
 .idea
 
+# don't store pdf's other compiled docs
+**/*.pdf
+**/*.docx
+
 # Meeting transcripts (private - not committed)
 **/transcript.*

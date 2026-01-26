@@ -1,13 +1,5 @@
-= WORLD METEOROLOGICAL ORGANIZATION (WMO)
+= ET-IM-SG2 23rd January 2026 Teleconference
 
-INFCOM SC-IMT
-
-'''
-
-*Expert Team on Information Management* +
-Original Language: English
-
-*ET-IM-SG2 23rd January 2026 Teleconference* +
 23 January 2026 12:00 - 13:30 UTC
 
 == 1. Participants
