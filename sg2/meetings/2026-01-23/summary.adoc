@@ -42,7 +42,7 @@ test suite, and planning for the document review process.
 * The team reviewed an example abstract test suite from the OGC API Common specification
 * Ian explained the difference between abstract test suites (written specifications) and physical test suites (executable code)
 * David noted that creating abstract tests requires finalized functional requirements first
-* Ge Peng raised concern about team capacity to complete both requirements and test suite within timeline
+* Ge Peng asked about team capacity to complete both requirements and test suite within timeline
 
 ==== 2.3.2 Decision
 
