@@ -36,3 +36,34 @@ Related: https://github.com/wmo-im/cdms-functional-requirements
 │   └── README.md
 └── clause.md               # Instructions for transcript processing
 ```
+
+## Compiling Meeting Summaries
+
+Meeting summaries are written in AsciiDoc format. To compile them to Word (docx), PDF, or HTML, use Docker with the provided Dockerfile and Makefile.
+
+### Prerequisites
+
+- [Docker](https://www.docker.com/)
+
+### Build the Docker Image
+
+```bash
+docker build -t et-im-docs .
+```
+
+### Usage
+
+Run the make commands inside the Docker container:
+
+```bash
+# Compile to Word (.docx)
+docker run --rm -v $(pwd):/documents et-im-docs make summary-docx FILE=sg2/meetings/2026-01-23/summary.adoc
+
+# Compile to PDF
+docker run --rm -v $(pwd):/documents et-im-docs make summary-pdf FILE=sg2/meetings/2026-01-23/summary.adoc
+
+# Compile to HTML
+docker run --rm -v $(pwd):/documents et-im-docs make summary-html FILE=sg2/meetings/2026-01-23/summary.adoc
+```
+
+Output files are created in the same directory as the source file.
