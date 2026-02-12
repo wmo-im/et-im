@@ -1,0 +1,165 @@
+= WORLD METEOROLOGICAL ORGANIZATION (WMO)
+
+INFCOM SC-IMT
+
+'''
+
+*Expert Team on Information Management* +
+Original Language: English
+
+*ET-IM-SG1 29th January 2026 Teleconference* +
+29 January 2026 12:00 – 13:05 UTC
+
+== 1. Participants
+
+*Chair:* Ge Peng
+
+*Participants:* William Wright, Denis Stuber, Liu Yiming, Etna, Charlotte McBride
+
+*Secretariat*: David Berry, Xiaoxia Chen, Anna Milan
+
+== 2. Summary
+
+=== 2.1 Welcome and Housekeeping
+
+David welcomed the group and noted apologies from Axel. Liu Yiming was welcomed back after being inadvertently dropped from the meeting invite. Team members who have not yet provided their GitHub handles were asked to do so to enable participation in the repository. David confirmed he will send meeting notes via GitHub and as a Word document.
+
+=== 2.2 Centennial Observing Stations
+
+William and David presented a proposal to strengthen provisions around Centennial observing stations across WMO-No. 1238 and the Manual on WIGOS.
+
+==== 2.2.1 Proposed Approach
+
+* The definition of Centennial and other long-term observing stations remains in WMO-No. 1238, along with the recognition process
+* Proposed text for the Manual on WIGOS (Appendix 5.1, near provisions 5.9–5.11 on reference climatological stations): members should submit stations with long-term stability and a long period of observation to WMO for recognition as a Centennial or other long-term observing station, with a cross-reference to WMO-No. 1238
+* William suggested expanding the cross-reference to specifically cite the definition and relevant section in 1238
+
+==== 2.2.2 Station Categories
+
+* Three sets of recognition criteria currently exist: Centennial (atmospheric), hydrology, and marine/sea level
+* William provided context on the drafting of the recognition mechanism approximately three years ago, noting that "other long-term observing stations" covers stations that do not yet have a century of records but should be encouraged to continue
+
+==== 2.2.3 Next Steps
+
+* Denis noted that Peer should validate the proposal, as he has the most experience with Centennial stations. WMO has recently contacted all members to renew nominations. Denis also noted a draft second edition of the Centennial Observing Station guidance is in circulation
+* David will check the proposal with Peer and then send it to WIGOS colleagues for insertion into the Manual on WIGOS
+* The recommendation will be made on behalf of ET-IM and ET-DDS to INFCOM SC-ON and the Manual on WIGOS
+
+=== 2.3 Externally Sourced Data
+
+This was the main discussion topic, addressing how to handle provisions on externally sourced data in the revised WMO-No. 1238.
+
+==== 2.3.1 Background
+
+* The old Chapter 1 contained provisions on externally sourced data (1.1.1.1 on assessing opportunities, 1.1.1.2 on recording data sources in databases)
+* Agreement to not reintroduce 1.1.1.1 (assessing opportunities offered by externally sourced data), as the referenced WIGOS guidance does not yet exist
+* Discussion focused on how to address the requirements of the former 1.1.1.2 within the revised document structure
+
+==== 2.3.2 Key Concerns
+
+William emphasized the importance of regulatory statements requiring differentiation between data from known sources (e.g. National Met Services) and externally sourced data:
+
+* Failure to differentiate could lead to inadvertent release of sensitive third-party data or use of data not fit for purpose
+* External data is already important and will become more so as Met Service budgets contract while demand for services increases
+* Crowdsource data should be treated as a distinct category; William suggested it may not be appropriate for the climate record
+
+David noted that the manual applies to entities broader than just National Met Services (including universities, national archives, etc.), and that data management principles should apply equally to all data regardless of source.
+
+==== 2.3.3 Proposed Provisions
+
+The team identified three locations in the document to address externally sourced data:
+
+. *Provenance metadata (Section 3.3.1):* Add to the existing requirement on recording the origin of raw observations: "whether the data are internally or externally sourced"
+. *Data security and access control (Section 3.4.4.3):* Insert a provision on preserving and propagating licensing and usage conditions for externally provided data
+. *Usability (Section 3.2.3):* Add a provision on use restrictions for external data, alongside existing provisions on data usage licensing and WMO core data policy
+
+==== 2.3.4 Should vs Shall
+
+* Ge Peng proposed using "shall" given the importance to climate data services
+* Etna (via chat) noted that Mexico does not currently log external data sources, and voted for "should"
+* The team agreed to use "should" for now, recognizing the burden on less-resourced countries, with the possibility of strengthening to "shall" in future
+
+==== 2.3.5 Next Steps
+
+* David will draft the three proposed provisions
+* The core team will continue discussion next week before bringing it to the wider group
+
+=== 2.4 Attribution Day Definition
+
+William and Denis reported that, while working on the DAYCLI guide, they concluded the definition of "attribution day" needs to be retained in WMO-No. 1238.
+
+* The definition had been proposed for removal at a previous meeting
+* David noted it can be included if it is used within a provision
+* David proposed adding a statement referencing the WIGOS metadata standard, which already requires members to record the climatological day (referred to as "diurnal base time" or similar) for 24-hour period observations
+* This would highlight the importance of attribution day and remind members of their existing obligation
+* Denis requested David share the specific WIGOS metadata standard reference
+
+=== 2.5 Definitions: Balance Between Inclusion and Removal
+
+Liu Yiming presented feedback developed with Ms. Gao on the approach to removing definitions from WMO-No. 1238.
+
+==== 2.5.1 Proposed Framework
+
+Their concern is that removing too many basic concepts could make the document incomplete and reduce its scope. They proposed evaluating definitions based on the relationship between WMO-No. 1238 and other documents:
+
+* *Parallel relationship:* Concepts should be specially modified as they appear in 1238
+* *Other document is higher-level:* Concepts in 1238 should be modified to be more specific
+* *Other document is lower-level:* Concepts in 1238 should be modified to be more abstract
+* *Concepts are identical:* Check document history to determine which appeared first; the originating document should retain the definition
+
+==== 2.5.2 Suggested Additions
+
+Liu Yiming suggested adding definitions for concepts closely related to data management, including data monitoring, data format, and data decoding.
+
+==== 2.5.3 Team Response
+
+* Ge Peng welcomed the approach as addressing the balance between over-including and over-removing definitions
+* David noted this supports the concept of including a glossary of terms for important concepts not directly used in provisions
+* The team expressed general support for including a glossary section
+
+=== 2.6 William's Availability
+
+William noted he will attend next week's meeting but will miss the following two meetings due to travel to Fiji.
+
+== 3. Key Decisions
+
+* Centennial stations: definition and recognition process remain in WMO-No. 1238; proposed text for Manual on WIGOS agreed in principle, pending review by Peer
+* Externally sourced data: provisions to be drafted in three locations (provenance, security, usability); "should" to be used rather than "shall" for now
+* Attribution day: definition to be retained in 1238, with a provision referencing the WIGOS metadata standard
+* Definitions approach: team supports Liu Yiming's framework for evaluating which definitions to keep, modify, or remove
+* Glossary: team supports including a glossary section for important terms not used in provisions
+
+== 4. Action Items
+
+=== David Berry
+
+- [ ] Check Centennial stations proposed text with Peer, then send to WIGOS colleagues
+- [ ] Send the WIGOS metadata standard reference for attribution day / climatological day to Denis and William
+- [ ]  Add "whether data are internally or externally sourced" to provenance metadata provisions
+- [ ]  Draft provision on preserving licensing and usage conditions for externally provided data
+- [ ]  Draft provision on use restrictions for external data in the usability section
+- [ ]  Send meeting notes via GitHub and as a Word document
+
+=== William and Denis
+
+- [ ]  Continue work on the DAYCLI guide
+
+=== All
+
+- [ ]  Send GitHub handles to David if not yet done
+
+=== Liu Yiming
+
+- [ ]  Continue providing comments on definitions via GitHub
+
+== 5. Date and Time of Next Meeting
+
+*Date:* Week of 12 February 2026
+
+*Time:* Same time
+
+*Purpose:*
+
+* Continue discussion on externally sourced data provisions (core team)
+* Review drafted provisions
+* Further discussion on definitions balance
