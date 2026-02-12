@@ -86,7 +86,7 @@ The team identified three locations in the document to address externally source
 
 === 2.4 Attribution Day Definition
 
-William and Denis reported that, while working on the day-clear guide, they concluded the definition of "attribution day" needs to be retained in WMO-No. 1238.
+William and Denis reported that, while working on the DAYCLI guide, they concluded the definition of "attribution day" needs to be retained in WMO-No. 1238.
 
 * The definition had been proposed for removal at a previous meeting
 * David noted it can be included if it is used within a provision
@@ -142,7 +142,7 @@ William noted he will attend next week's meeting but will miss the following two
 
 === William and Denis
 
-- [ ]  Continue work on the day-clear guide
+- [ ]  Continue work on the DAYCLI guide
 
 === All
 
