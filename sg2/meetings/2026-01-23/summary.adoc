@@ -1,0 +1,160 @@
+= ET-IM-SG2 23rd January 2026 Teleconference
+
+23 January 2026 12:00 - 13:30 UTC
+
+== 1. Participants
+
+*Chair:* Ian Edwards
+
+*Participants:* Ge Peng, Liu Yiming, Dwayne Scott, Etna Cervantes
+
+*Secretariat:* David Berry
+
+*Apologies:* Xavier Perrot, Peter Thorne, Patrick Muimi, Denis Stuber
+
+== 2. Summary
+
+=== 2.1 Overview
+
+This meeting focused on GitHub workflow familiarization, approval of previous meeting notes, a decision on the abstract
+test suite, and planning for the document review process.
+
+=== 2.2 Meeting Notes from 9th January
+
+==== 2.2.1 Approval Process
+
+* Ian demonstrated the GitHub pull request workflow for reviewing and merging meeting notes
+* The team reviewed the pull request containing the January 9th meeting summary
+* Previous review comments had been addressed and marked as resolved
+* The meeting notes were approved and merged into the main repository
+
+==== 2.2.2 Access and Workflow
+
+* GitHub access via e-mail and Word documents will be provided for team members who cannot access GitHub
+(e.g., due to network restrictions in some countries)
+* Liu Yiming noted that GitHub access from China can be unreliable; suggestion to use both GitHub and e-mail together was accepted
+* David confirmed he will send meeting notes as Word documents via e-mail going forward
+
+=== 2.3 Abstract Test Suite Decision
+
+==== 2.3.1 Discussion
+
+* The team reviewed an example abstract test suite from the OGC API Common specification
+* Ian explained the difference between abstract test suites (written specifications) and physical test suites (executable code)
+* David noted that creating abstract tests requires finalized functional requirements first
+* Ge Peng asked about team capacity to complete both requirements and test suite within timeline
+
+==== 2.3.2 Decision
+
+* *Decision:* The team agreed to postpone work on the abstract test suite and focus on finalizing the functional requirements document
+* Rationale: Timeline constraints mean there is insufficient time to both finalize requirements and develop the test suite
+* The abstract test suite can be addressed in future work after the document is submitted to INFCOM
+* An example of abstract tests from the current requirements will be created to demonstrate what they would look like
+
+=== 2.4 GitHub Workflow Training
+
+==== 2.4.1 Demonstration
+
+Ian provided a detailed walkthrough of:
+
+* Navigating the ET-IM repository structure (SG1, SG2 directories)
+* The difference between the ET-IM admin repository and the CDMS Functional Requirements document repository
+* Creating and reviewing pull requests
+* Making comments and suggestions on proposed changes
+* Using the Issues tab to track tasks related to document chapters
+* Using the Discussions tab for general conversations not tied to specific file changes
+* Filtering issues by chapter labels
+* Assigning reviewers to issues
+
+==== 2.4.2 Repository Structure Clarification
+
+* Two repositories are being used:
+** `wmo-im/et-im`: For team administration (meeting notes, terms of reference)
+** `wmo-im/cdms-functional-requirements`: For the CDMS document development
+* Issues for each chapter and each requirements class have been created in the document repository
+* Team members can filter issues by chapter label to find relevant discussions
+
+==== 2.4.3 GitHub Quick Start Guide
+
+* Ge Peng requested a simple guide for team members unfamiliar with GitHub
+* Ian agreed to create a Word document with screenshots explaining:
+** How to register for GitHub
+** How to navigate to the ET-IM and CDMS repositories
+** How to propose changes to documents
+** What to do if GitHub is inaccessible
+* This guide will be shared with the entire ET-IM team
+
+=== 2.5 Document Review Process
+
+==== 2.5.1 Review Approach
+
+* Team members should familiarize themselves with the entire document
+* Identify sections of particular expertise or interest
+* Focus detailed review on those specific sections
+* Propose changes via GitHub pull requests
+* Assign yourself to issues when reviewing specific sections
+
+==== 2.5.2 Timeline
+
+* First draft completion target: End of March / 1st April 2026
+* Milestone wording will be updated to remove reference to abstract test suite
+
+=== 2.6 PDF Generation and Repository Management
+
+* Discussed the need for team members to access current PDF versions
+* Acknowledged that the current approach of storing compiled PDFs in the repository may cause storage issues
+* David and Ian to work on an improved workflow, potentially using GitHub Codespaces
+* David will continue to provide Word versions of the document via e-mail
+
+=== 2.7 Public Repository Note
+
+* Liu Yiming asked about repository visibility
+* Clarified that the repository is currently public - anyone can view the content
+* All discussions and document history will eventually be publicly visible
+* Ian will include a note about this in the GitHub guide
+
+== 3. Key Decisions
+
+* Abstract test suite work is postponed to focus on finalizing functional requirements
+* Meeting notes will be distributed via both GitHub and e-mail (with Word attachment)
+* A GitHub quick start guide will be created for the team
+* Next meeting to be scheduled via Doodle poll for the week of 9th February (Tuesday preferred)
+* Clause terminology from OGC ModSpec will be retained (not changed to "chapter")
+
+== 4. Action Items
+
+=== Ian Edwards
+
+* Create a simple GitHub quick start guide (Word document with screenshots) for the ET-IM team
+* Include information on: registering for GitHub, navigating repositories, proposing changes, and what to do if GitHub is inaccessible
+* Include note about public visibility of repository content
+
+=== David Berry
+
+* Send meeting notes as Word documents via e-mail going forward
+* Send Doodle poll for next meeting date (week of 9th February, Tuesday options preferred)
+* Update milestone wording to remove abstract test suite reference
+* Review and fix GitHub permissions so team members can assign themselves to issues
+* Enable discussions tab on ET-IM repository
+* Send Word version of the latest CDMS functional requirements document
+* Discuss with Tom about creating a broader WMO guide for GitHub workflows (potential TT-OSS activity)
+
+=== All Team Members
+
+* Familiarize with the entire CDMS functional requirements document
+* Identify sections of particular expertise or interest for detailed review
+* Propose changes via GitHub where possible, or reply via e-mail if GitHub is inaccessible
+* Assign yourself to issues when reviewing specific sections
+* Provide GitHub IDs to David if not already done
+
+== 5. Date and time of Next Meeting
+
+*Date:* To be determined via Doodle poll (week of 9th February 2026, Tuesday preferred)
+
+*Time:* 1200 - 1330 UTC (to be confirmed)
+
+*Purpose:*
+
+* Review progress on document familiarization
+* Discuss any proposed changes or issues raised
+* Assign section leads for detailed review
