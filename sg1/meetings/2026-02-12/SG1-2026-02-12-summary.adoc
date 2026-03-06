@@ -1,0 +1,178 @@
+= WORLD METEOROLOGICAL ORGANIZATION (WMO)
+
+INFCOM SC-IMT
+
+'''
+
+*Expert Team on Information Management* +
+Original Language: English
+
+*ET-IM-SG1 12th February 2026 Teleconference* +
+12 February 2026 12:00 – 13:05 UTC
+
+== 1. Participants
+
+*Chair:* Ge Peng
+
+*Participants:* Denis Stuber, Liu Yiming, Axel Andersson
+
+*Secretariat*: David Berry, Xiaoxia Chen, Anna Milan
+
+== 2. Summary
+
+=== 2.1 Externally Sourced Data — New Provisions
+
+David presented three new provisions on external, or third party, data added to WMO-No. 1238 following the core team
+discussions at the previous meetings. These address the concerns raised about managing externally sourced data:
+
+* *3.2.3.4 — Usage and licensing conditions:* Members should ensure entities record and respect usage and licensing
+conditions for externally sourced data and data from third-party partners, and that this information is preserved
+and provided to users. A note references the Guide to WIGOS for additional information.
+* *Individual record association:* Members should ensure that entities, when recording the origin of raw observations
+and derived data (as referenced in 3.3.1.2), associate individual records with the relevant source — linking individual
+data points to the dataset or source they originated from.
+* *Access control mechanisms:* Members should ensure that entities implement access control mechanisms so that any usage
+or licensing conditions for externally sourced data are met, and that these conditions are communicated to users when
+access is permitted.
+
+No objections were raised by the team.
+
+=== 2.2 Climatological Day Definition
+
+David presented the refined climatological day definition and a new provision, incorporating feedback from the previous week's discussion with William and Denis.
+
+==== 2.2.1 New Provision
+
+A new provision (2.2.2) requires that members shall ensure the climatological day is recorded in the WIGOS metadata for stations making climate and DAYCLI reports. A note explains that the diurnal base time element (6-07) in the WIGOS metadata standard is used for this purpose.
+
+==== 2.2.2 Definition
+
+The proposed definition: "The 24-hour period (e.g., midnight to midnight, 6 AM to 6 AM, etc., local time) over which a daily statistic has been calculated or measured. Examples include minimum, maximum and mean temperature, precipitation accumulation, etc. For a given station, the climatological day may vary with parameter and statistic."
+
+* Denis suggested listing midnight-to-midnight first as the more common case
+* Discussion on typical observation times: 6 AM in most countries, 8 PM in China
+* Ge Peng raised whether to specify how the 24-hour boundary is handled (e.g. 0:00–23:59 vs 0:00–0:00). Denis noted the consequences for database queries can be significant. David noted this will be covered in the DAYCLI guidance rather than the definition.
+
+==== 2.2.3 Per-Parameter Recording
+
+Denis raised that the climatological day is defined per station *and* per parameter/variable, not just once per station. David confirmed the WIGOS metadata standard records the diurnal base time per sensor, and that a single sensor can measure multiple parameters. David took an action to verify how this is handled and whether it needs to be addressed in the revised WIGOS metadata representation (WMDR).
+
+=== 2.3 Definitions Strategy
+
+==== 2.3.1 Purpose of Definitions in the Manual
+
+David reiterated the purpose of definitions: the manual defines standard practices (shall) and recommended practices (should) for members. For a definition to be included, the term must be used in the manual's provisions. Terms not used in provisions could be collected into a glossary proposed as an annex.
+
+==== 2.3.2 Mapping Definitions to Provisions
+
+* David proposed that for each definition (both retained and removed), team members should identify which provision it is used in, to verify its inclusion is justified
+* Ge Peng volunteered to systematically map the removed terms, checking both the maturity metrics document and the main body of WMO-No. 1238 for occurrences
+* David noted this is a useful exercise for all team members who wish to see terms reintroduced
+
+==== 2.3.3 Cross-Referencing with Other Manuals
+
+Axel asked about cross-checking definitions against other WMO documents. David noted:
+
+* A proposal to establish a centralised WMO definitions repository was made at a previous INFCOM or Congress session but has not received priority
+* David has been doing ad-hoc cross-referencing between manuals (e.g. with the WIGOS manual)
+* The team could recommend to INFCOM that such a repository be developed
+
+Denis raised the question of UN terms as a reference, noting potential discrepancies between UN terminology and WMO technical regulations. David noted the WMO publications department updates UN terms when WMO documents change, though Ge Peng observed that the same term can be defined differently across manuals, and there is limited capacity to reconcile these.
+
+==== 2.3.4 Liu Yiming's Input
+
+Liu Yiming suggested focusing on finalising the manual body first, then returning to definitions to identify which are needed and which are new. Ge Peng confirmed this is the approach being followed — the body is largely complete and definitions are the final step.
+
+=== 2.4 WCMP 2 Climate Extension
+
+David proposed deferring the standardised WCMP 2 extension for climate metadata:
+
+* The ambition had been to define the extension in this revision, but there is insufficient time before the November INFCOM deadline, and Tom Kralidis's availability is limited
+* Instead, the provision has been modified to: entities should extend the metadata with additional information as required
+* A separate recommendation will request INFCOM to task SC-IMT with developing a standardised WCMP 2 extension for climate in the next intersessional period
+* Ge Peng and Axel agreed this was a pragmatic approach
+
+=== 2.5 Document Status and Timeline
+
+David reported the team is in a strong position:
+
+* The manual body revisions are largely complete; only definitions remain as a significant item
+* Marine climate data has been carried over as Part 2, with text from the Guide to Marine Meteorological Services included as an attachment
+* The Task Team on Climate Infrastructure (TT-CI) report will be shared with the team; recommendations from TT-CI will be addressed in the next intersessional period to avoid preempting their findings (e.g. the definition of national, regional, and global climate data centres has been reverted to "entities")
+* David will write an implication summary paper highlighting what has changed and the impact on members
+
+==== 2.5.1 Key Dates
+
+* *September 2026:* Submission deadline for INFCOM
+* *End of July 2026:* Documents should be finished (accounting for summer)
+* *April–May 2026:* Aim to complete internal work and begin external review
+* *March 2026:* Management group meeting (slides prepared by David for SC-IMT chair Remi Giraud)
+
+==== 2.5.2 Review Plan
+
+* David proposed concentrated review sessions to go through provisions systematically
+* Ge Peng suggested early April as the target, to allow time for iteration after definitions are settled
+* The team agreed to allow two more weeks for definition comments, then transition to full document review
+* David will send a Doodle poll for availability
+
+=== 2.6 Implication Summary
+
+Xiaoxia Chen highlighted the importance of preparing a summary of implications for members:
+
+* WMO has migrated to a new platform used as the main communication channel
+* An implication summary would be useful for pre-INFCOM session briefings, as not all members will have time to review the full manual
+* Members primarily need to understand what has changed and the key implications for them
+
+=== 2.7 Meeting Schedule and Roadmap
+
+==== 2.7.1 Meeting Day Change
+
+The team discussed moving meetings from Thursday to Tuesday at the same time, as Denis has a recurring conflict on Thursdays. Axel and Liu Yiming confirmed Tuesday works. David will send an email to the wider team to check for objections.
+
+==== 2.7.2 Meeting Roadmap
+
+Liu Yiming requested a schedule showing the focus areas for upcoming meetings, so all team members (including those unable to attend) can follow the progress and prepare accordingly. David and Ge Peng will develop a roadmap for the next few meetings.
+
+== 3. Key Decisions
+
+* Externally sourced data: three new provisions adopted without objection (usage/licensing, individual record association, access control)
+* WCMP 2 climate extension: deferred to next intersessional period; recommendation to INFCOM to task SC-IMT with developing it
+* Climatological day: definition and new provision (2.2.2) agreed in principle, with minor refinements to examples
+* Definitions: two more weeks for comments, then transition to full document review
+* Meeting day: proposed move to Tuesday, pending confirmation from wider team
+
+== 4. Action Items
+
+=== David Berry
+
+- [ ] Send link to WIGOS metadata standard document and UML diagram to the team
+- [ ] Verify how diurnal base time relates to parameters vs sensors in WIGOS metadata
+- [ ] Write implication summary paper for the document changes
+- [ ] Share TT-CI report with the team
+- [ ] Send email to wider team about proposed Tuesday meeting change
+- [ ] Work with Ge Peng to develop a meeting roadmap/schedule
+- [ ] Send Doodle poll for review session availability
+- [ ] Send meeting notes via GitHub and as a Word document
+- [ ] Provide feedback on management group slides to Ge Peng (shared previously)
+
+=== Ge Peng
+
+- [ ] Systematically map removed definitions to where they appear in the document (maturity metrics and main body)
+- [ ] Review management group presentation slides (by early next week)
+
+=== All
+
+- [ ] Review definitions and provide comments within the next two weeks
+- [ ] When proposing terms for reintroduction, identify which provisions they are used in
+
+== 5. Date and Time of Next Meeting
+
+*Date:* Tuesday (pending confirmation from wider team), week of 24 February 2026
+
+*Time:* Same time (12:00 UTC)
+
+*Purpose:*
+
+* Finalise definitions
+* Review any remaining comments
+* Transition planning toward full document review
