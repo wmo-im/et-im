@@ -14,7 +14,7 @@ Original Language: English
 
 *Chair:* Ge Peng
 
-*Participants:* William Wright, Denis Stuber, Liu Yiming, Etna, Charlotte McBride
+*Participants:* William Wright, Denis Stuber, Liu Yiming, Etna Cervantes, Charlotte McBride
 
 *Secretariat*: David Berry, Xiaoxia Chen, Anna Milan
 
@@ -75,7 +75,7 @@ The team identified three locations in the document to address externally source
 
 ==== 2.3.4 Should vs Shall
 
-* Ge Peng proposed using "shall" given the importance to climate data services
+* William Wright proposed, seconded by Ge Peng, using "shall" given the importance to climate data services
 * Etna (via chat) noted that Mexico does not currently log external data sources, and voted for "should"
 * The team agreed to use "should" for now, recognizing the burden on less-resourced countries, with the possibility of strengthening to "shall" in future
 
