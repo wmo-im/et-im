@@ -1,0 +1,173 @@
+= Meeting Summary: Sub-group 1 - 2026-02-24
+:revdate: 2026-02-24
+
+== Attendees
+
+=== ET-IM Members
+
+* Ge Peng (Chair)
+* Etna Cervantes
+* Liu Yiming
+* Peter Thorne
+* William Wright
+
+=== Secretariat
+
+* David Berry
+
+== Agenda
+
+. Schedule overview for upcoming meetings
+. Final review of definitions
+. Any other business
+
+== Discussion Summary
+
+=== 1. Schedule Overview
+
+David presented the meeting schedule for the coming months. Key milestones:
+
+* **17 March**: Review of Chapters 1 and 2 (the latest version was attached to the meeting invite). Team members requested to read both chapters and submit comments by the Friday before the meeting.
+* **31 March**: Chapter 3 (data management requirements — the longest chapter)
+* **5 May**: Chapters 4 and 5 (shorter chapters)
+* **19 May**: Full document review — final pass to resolve any outstanding issues before submission
+
+Ge Peng noted the team is in good shape timing-wise but should remain focused during the chapter reviews to avoid reopening already resolved discussions.
+
+David also noted that Part II of the Manual (marine climate data system) contains material migrated from the Manual on Marine Meteorological Services. Changes to this section require coordination with IOC colleagues given its joint WMO/IOC nature.
+
+==== Review Process
+
+William raised a question about the external review process. David clarified:
+
+* The aim is to finish the draft by May to allow time for review by experts from technical commissions.
+* David noted that the INFCOM management group would take place the week of the 9th March, and that the documents to be presented to INFCOM was on the agenda.
+However, the review process for those documents is unclear.
+* Members who are also in ET-DDS should get this on the ET-DDS agenda.
+* David will also engage with ET-MCVC (Expert Team on Monitoring and Communicating Climate Change and Variability).
+* David will attend a meeting with WIGOS colleagues immediately following this call. A five-slide presentation summarising the team's work has been prepared and shared with Peng and William; it could be used to present to SC-ON, though this still needs to be proposed.
+
+William also noted the need for:
+
+* A consistency check to ensure all terms in the definitions are actually referenced in the Manual's provisions.
+* A statement of proposed changes to other Manuals (some cross-referenced statements in other Manuals are not helpful from a climate perspective).
+* Both a track-changes and a clean version of the document for the chapter reviews.
+
+David confirmed that both versions would be attached to future meeting invites, with track changes accepted in the clean copy.
+
+=== 2. Final Review of Definitions
+
+Ge Peng presented the results of an action from the previous meeting: a review of each term proposed for removal, checking whether it appears in the Manual provisions and in the Stewardship Maturity Matrix (WMO-No. 1328).
+
+Two terms remained for team decision:
+
+==== Data Portability
+
+Data portability does not appear anywhere in the Manual provisions, only in the maturity matrix. William noted these terms were originally included because they were used in the maturity matrix, but the focus has shifted. The team agreed to remove data portability from the definitions and place it in the glossary.
+
+**Decision**: Remove from definitions; retain in glossary.
+
+==== Data Analysis
+
+Data analysis appears only once in the provisions, at section 3.7.1, in a generic context ("good practice in climate data management and analysis"). The current definition is broad: _the process of inspecting, cleansing, transforming and modeling data with the goal of generating useful information…_
+
+Peter Thorne noted the term is so broad as to be largely meaningless as a standalone definition — it could encompass quality control, homogenisation, gridding, interpolation, indices, and more. He supported moving it to the glossary only, not the definitions section.
+
+Etna Cervantes argued for retaining it, noting that many hydrological variables (e.g. river flow, evapotranspiration) are derived/transformed quantities that fall under data analysis, and the definition helps members understand what they need to fulfil requirements.
+
+William supported keeping it in the glossary for now, noting that in a future broader edition the definition may be refined as "climate data analysis."
+
+**Decision**: Keep in glossary (not in the definitions section); may be revisited when the scope of 1238 is broadened.
+
+==== Centennial Observing Stations and Long-Term Stations
+
+William raised the Centennial Observing Station definition and asked whether it could be broadened to reference other categories of long-term observing stations (e.g., stations with 75 years of record, intended to encourage members to maintain stations until they reach centennial status).
+
+David confirmed Chapter 5 of the Manual uses both "Centennial Observing Station" and "long-term observing station," providing a hook for the latter definition. The Guidelines document is referenced from that chapter. David also noted that a discussion with DWD colleagues the previous day raised the question of whether long-term and centennial stations should be required to be registered in OSCAR/Surface, as not all are currently registered.
+
+William agreed that OSCAR/Surface registration should be a requirement. David indicated this could be explored as a new provision.
+
+William asked that proposed text for the long-term station definition be submitted via email to the whole group.
+
+==== Essential Climate Variables (ECV)
+
+Liu Yiming noted that the ECV definition is important because the Manual concerns the management of climate data, and ECVs are a key category. He argued the Manual should make clear that ECVs deserve particular attention (e.g. for storage, quality control flags, reference metadata), and that the Manual should reference the authoritative definition rather than redefine it.
+
+Peter Thorne informed the group that GCOS is revising its ECV definitions as part of an ECV rationalisation process. The GCOS Steering Committee needs to formally approve the revised definitions, which is expected within 6–12 months. Peter shared the revised definitions in the meeting chat:
+
+* **Essential Climate Variable (ECV)**: a well-defined quantity that critically contributes to the characterisation of Earth's climate.
+* **ECV Quantity**: a property or phenomenon whose magnitude can be expressed as a number; ECV quantities can be physical, chemical, or biological.
+
+The team agreed that if these definitions are incorporated into the Manual on WIGOS, the Manual on 1238 should reference WIGOS rather than independently defining them.
+
+David confirmed he would raise the ECV definition at the WIGOS meeting immediately following this call (with Kruno/Belen) to ensure alignment.
+
+==== WMO-No. 49 and Cross-Manual Definitions
+
+The discussion also touched on terms where the current version of the Manual says "see definition in WMO-No. 49." David clarified that these definitions already exist in WMO-No. 49. The team could recommend moving them fully into 1238 and deleting them from WMO-No. 49, if the terms are specific enough to this Manual rather than cross-cutting. William noted six to eight definitions fall into this category.
+
+David also noted a request from Congress to move definitions from WMO-No. 49 into the relevant Manuals, which supports this approach.
+
+=== 3. INFCOM Submission
+
+David reported on the INFCOM process:
+
+* The INFCOM Management Group meeting is in two weeks. The list of papers to be submitted to INFCOM will be discussed but not in detail.
+* This work (the update to Manual 1238) will be included.
+* Given the work involves harmonising and clarifying existing regulations rather than adding new provisions, it is expected to be submitted for **non-debate** approval — any member can request it be brought to the floor, but otherwise it will be submitted for approval without debate.
+* This decision will be confirmed at the INFCOM Management Group session.
+
+== Decisions
+
+* Remove "data portability" from definitions; retain in glossary
+* Retain "data analysis" in glossary only (not in the definitions section); revisit if/when the Manual's scope is broadened
+* ECV definition should reference the authoritative definition in WIGOS/GCOS rather than be independently defined in 1238
+* Long-term observing station definition: William to propose additional text by email for team discussion
+* Both track-changes and clean versions of the document to be attached to future meeting invites
+* Team members to email comments on chapters to the whole group, not just to David or Ge Peng
+
+== Action Items
+
+[cols="3,2,1"]
+|===
+| Action | Owner | Due Date
+
+| Update meeting schedule in calendar invites
+| David Berry
+| After meeting
+
+| Email latest version of document to whole group; ensure both track-changed and clean versions are attached to next meeting invite
+| David Berry
+| After meeting
+
+| Discuss review process approach with Enrico
+| David Berry
+| Before 17 March meeting
+
+| Get ET-DDS to add Manual review to their agenda; liaise with Pierre
+| David Berry
+| TBD
+
+| Talk to Belen (GCOS Secretariat) about ECV revised definitions and timeline; raise at WIGOS meeting
+| David Berry
+| At WIGOS meeting (same day)
+
+| Raise whether long-term and Centennial stations should be required to register in OSCAR/Surface
+| David Berry
+| TBD
+
+| Propose text for long-term observing station definition by email to the whole group
+| William Wright
+| TBD
+
+| Read Chapters 1 and 2 of the Manual and email any issues to the whole group before the next meeting
+| All
+| Friday 13 March (before 17 March meeting)
+|===
+
+== Next Meeting
+
+* **17 March 2026**: Full subgroup — review of Chapters 1 and 2. Members should read both chapters and submit issues via email to the group by the Friday prior (13 March).
+* **31 March 2026**: Review of Chapter 3 (data management requirements)
+* **5 May 2026**: Chapters 4 and 5
+* **19 May 2026**: Full document review
