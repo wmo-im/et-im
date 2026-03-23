@@ -1,0 +1,131 @@
+= WORLD METEOROLOGICAL ORGANIZATION (WMO)
+
+INFCOM SC-IMT
+
+'''
+
+*Expert Team on Information Management* +
+Original Language: English
+
+*ET-IM-SG1 17th March 2026 Teleconference* +
+17 March 2026 12:00 – 13:00 UTC
+
+== 1. Participants
+
+*Chair:* Ge Peng
+
+*Participants:* William Wright, Denis Stuber, Liu Yiming, Axel Andersson, Charlotte McBride, Alvaro Scardilli
+
+*Secretariat*: David Berry, Washington Otieno
+
+== 2. Summary
+
+=== 2.1 INFCOM SC-IMT Management Group Update
+
+David reported on the management group meeting held the previous week in Geneva. Key points:
+
+* Work is progressing as planned; WMO-No. 1238 and the CDMS functional requirements are on track for INFCOM 4, both proposed for non-debate
+* For the intersessional period between INFCOM 4 and 5, activities will continue the current work, including looking at a discovery metadata extension for climate (WCMP 2)
+* The expansion of GBON to potentially include climate was mentioned; this is still under discussion and is part of the reason for deferring agenda item 2 (Manual on WIGOS changes) pending the outcome
+* An advisory group or study group on climate is under discussion, building on the Task Team on Climate Infrastructure (TT-CI) report; details are still being developed and would be established in the next intersessional period
+
+==== 2.1.1 ET-DDS
+
+Denis reported that a decision has been taken to remove ET-DDS and to reduce the size of the Standing Committee on Climate Services. ET-DDS is now exploring how its activities might be split between requirements and implementation, to be distributed to relevant expert teams across SERCOM and INFCOM SC-IMT in a way that satisfies both standing committees and members.
+
+==== 2.1.2 WIS2 Champions Meeting
+
+A WIS2 champions meeting is being held in Bali at the end of March, with eleven champions selected from different WMO regional associations to assist members with WIS2 implementation (both exchanging and accessing data). William noted his involvement in the Bureau of Meteorology's COSPAC project for South Pacific countries and requested further details from David, as he felt the COSPAC project should have someone represented at the meeting, at least virtually. David agreed to send more information.
+
+==== 2.1.3 Task Team on Climate Infrastructure (TT-CI)
+
+The TT-CI report was presented to the management group. Key items include identifying global data centres for climate data. The report will go to INFCOM 4 and it is then up to standing committee chairs to incorporate recommendations into their work plans.
+
+=== 2.2 WMO No. 49 — Climate Services Chapter
+
+Ge Peng noted that the Standing Committee on Climate Services has circulated a draft of a new chapter on climate services for WMO No. 49, with review comments due by 23 March 2026 and a target to finalise by 31 July 2026 (ahead of SERCOM 4). Denis confirmed he is coordinating the review only for the ET-DDS section; the draft has been sent to all relevant expert teams across both standing committees.
+
+William flagged that the deadline is very tight. Following a brief discussion, David clarified the principle for handling definitions: definitions should go into the first document in which they are used. If a term is used in WMO No. 49, it should be defined there and referenced elsewhere. William confirmed he understood and would submit his definitions proposal by Friday (20 March 2026).
+
+=== 2.3 Document Review: Liu Yiming's Comments
+
+David walked through Liu Yiming's seven comments on WMO-No. 1238 (prepared with Ms. Gao).
+
+==== 2.3.1 Data Retention — Principle 3
+
+Liu Yiming proposed updating the wording from "for the duration of their specified retention periods" to "as long as possible". William supported the intent and suggested adding an explicit sentence: "For irreplaceable data such as original climate observations, the data and metadata should be kept in perpetuity." The team agreed and David marked the comment as resolved.
+
+==== 2.3.2 Type 2 Entities and Climate Dataset Development
+
+Liu Yiming queried whether Type 2 entities should be permitted to develop climate datasets. Ge Peng clarified that many climate data products are produced by non-WMO entities such as universities and research institutes, and that the manual should not restrict this. The team agreed no change was needed.
+
+==== 2.3.3 Terminology: "Libraries" in Type 2 Entity Definition
+
+Liu Yiming raised that "libraries" is ambiguous (e.g. could include reading rooms or general digital data libraries). Multiple alternatives were discussed:
+
+* "Documentation repositories" (Denis)
+* "Archives" (Liu Yiming and Axel, broadly supported)
+* "Repositories" (Ge Peng, as a more general term)
+* "Record-keeping organisations" (Will)
+
+Washington Otieno noted that the term "libraries" could also legitimately refer to community data repositories (e.g. open datasets), not just institutions. The team broadly converged on "archives" or "repositories" as clearer alternatives, with Ge Peng noting that "archives" is a specific type of repository. The team agreed the peer review process would also provide feedback and that the wording can be refined then.
+
+==== 2.3.4 Note on Entity Registration and Notification
+
+Liu Yiming raised a comment on a note relating to how WMO can know which entities a member has registered or notified. After discussion, David proposed deleting the note, as it adds complexity without adding regulatory content — the manual does not prohibit members from combining notification with other correspondence, so an explicit note is unnecessary. The team agreed to delete it. David noted that the existing process (PR writes to the Secretary General) remains unchanged, and that a more formal registration and discovery mechanism for climate centres could be developed in the next intersessional period.
+
+==== 2.3.5 Surface-Based and Space-Based Terminology
+
+Liu Yiming suggested alternative wording for "surface-based" and "space-based". David confirmed these terms carry specific technical meaning from the WIGOS domain (as defined in the Manual on WIGOS) and should be retained. Agreed.
+
+==== 2.3.6 Editorial Changes
+
+Minor editorial improvements were agreed, including punctuation adjustments and replacing "letter" with "notification" for consistency with usage elsewhere in the document.
+
+=== 2.4 Document Review: William's Comments
+
+William's comments were primarily residual queries about unresolved tracked comments in the Word document.
+
+* *Section 2.1.2.4 (provenance metadata):* William raised a cross-reference question. Ge Peng confirmed this will be addressed in the Chapter 3 review session; David to confirm the correct provision number.
+* *Section 2.1.2.5:* David to add a clarifying note to this provision after the meeting.
+* *Section 2.3 (WMO document references):* William asked whether the year of publication should be included. David confirmed that WMO document references do not include the year, as documents are updated more frequently than the manual and years quickly become outdated.
+
+Ge Peng asked David to resolve all comments in the document that have been addressed, to make the working version cleaner for review.
+
+== 3. Key Decisions
+
+* Data retention (Principle 3): wording updated to add that irreplaceable data (e.g. original climate observations) and associated metadata should be kept in perpetuity
+* "Libraries" in Type 2 entity definition: to be replaced with "archives" or "repositories" (exact wording to be confirmed)
+* Registration notification note: deleted, as it adds complexity without adding regulatory content
+* Surface-based / space-based terminology: retained as defined in the Manual on WIGOS
+* Definitions placement principle: definitions go in the first document where they are used; terms used in WMO No. 49 should be defined there
+* Document preparation: David to resolve addressed comments and send an updated version after the meeting
+
+== 4. Action Items
+
+=== David Berry
+
+- [ ] Send William details of the WIS2 champions meeting in Bali
+- [ ] Update document (tracked and untracked versions), resolve addressed comments, and distribute after the meeting
+- [ ] Confirm provision reference for William's comment on provenance metadata (likely Chapter 3)
+- [ ] Add clarifying note to provision 2.1.2.5 in the document
+- [ ] Send calendar invites for upcoming meetings (same UTC time, noting daylight saving transition)
+
+=== William Wright
+
+- [ ] Submit definitions proposal for WMO No. 49 to Denis (and copy David) by Friday 20 March 2026
+
+=== All
+
+- [ ] Review Chapter 3 and send comments to David by Friday 27 March 2026 (ahead of the 31 March meeting)
+
+== 5. Date and Time of Next Meeting
+
+*Date:* Tuesday 31 March 2026
+
+*Time:* 12:00 UTC (same UTC time; note daylight saving time transitions in some regions)
+
+*Purpose:*
+
+* Review of Chapter 3 of WMO-No. 1238
+* Review of submitted comments
