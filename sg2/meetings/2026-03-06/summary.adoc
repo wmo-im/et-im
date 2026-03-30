@@ -1,0 +1,133 @@
+= ET-IM-SG2 6th March 2026 Teleconference
+
+6 March 2026 12:02 - 12:57 UTC
+
+== 1. Participants
+
+*Chair:* Ian Edwards
+
+*Participants:* Ge Peng, Liu Yiming, Dwayne Scott, Washington Otieno, Xavier Perrot, Denis Stuber, Patrick Muimi
+
+*Secretariat:* David Berry
+
+== 2. Summary
+
+=== 2.1 Overview
+
+This meeting covered approval of the January meeting notes, a brief update on the abstract test suite, review and merging of a pull request incorporating Xavier's document feedback, discussion of terminology issues in the document, and planning for the next phase of document review.
+
+=== 2.2 Review and Approval of Previous Meeting Notes
+
+Ian walked through the open pull request containing the January 23rd meeting notes in the ET-IM GitHub repository, summarising the key points: GitHub workflow familiarisation, the decision to postpone the abstract test suite, and the document review process. The pull request was reviewed, approved and merged.
+
+Ian also noted that replies to GitHub notification e-mails are posted publicly to the repository, and committed to including a note on this in the GitHub quick start guide.
+
+=== 2.3 Abstract Test Suite
+
+No new discussion was needed. The team confirmed the decision from the previous meeting to postpone work on the abstract test suite and focus on finalising the functional requirements document. Examples of abstract tests remain available for future reference.
+
+=== 2.4 GitHub Quick Start Guide
+
+Ian reported he had paused work on the guide, proposing instead that it be developed for sharing across multiple expert teams following a similar GitHub-based process rather than produced in isolation. Xavier suggested preparing a draft now and then circulating it to other teams. Ge Peng agreed this would serve both the immediate need and provide a more polished resource for wider use. Ian committed to completing the draft.
+
+David confirmed there are other teams using GitHub-based workflows but no guides currently exist; once drafted, it could be shared with chairs of those teams and with Secretariat colleagues.
+
+=== 2.5 Document Publication via GitHub Pages
+
+David proposed compiling the CDMS functional requirements document after every meeting and publishing it via GitHub Pages, providing a live web version alongside downloadable PDF and Word formats — consistent with the approach used for other WMO documents managed on GitHub.
+
+Ian agreed, on the condition that each release carries a version number so recipients can easily identify which version they have. David agreed to implement auto-versioned releases.
+
+=== 2.6 Pull Request Review — Xavier's Changes
+
+Ian walked the team through the open pull request in the `cdms-functional-requirements` repository, incorporating changes based on Xavier's earlier Word document feedback, plus minor additional edits from Ian and David. The changes touched the index file, diagram figures (adding "Perform statistical processing and trend analysis" to a figure), and text in Chapters/Clauses 1, 2, 5, 6, and 7. Key changes in Chapters 6 and 7 included removal of conformance test references and expansion of the overview and justification text.
+
+Ian confirmed he had reviewed and approved the changes. Xavier expressed trust in the incorporation of his comments and agreed to merge, with the option to open new issues for anything he wishes to revisit.
+
+David noted that Chapter 1, which sets the scope and purpose of the document, is also important and warrants attention alongside the technical chapters.
+
+The pull request was merged.
+
+=== 2.7 Terminology Issues Raised
+
+Two new GitHub issues were created as a result of discussion:
+
+==== 2.7.1 Use of "Specification"
+
+Ge Peng raised concern that the document uses the term "specification" in a way that could be confusing to non-technical readers. The document is called a companion _specification_ to WMO-No. 1131 (CDMS Specifications), yet its content defines functional and non-functional _requirements_ — a distinct concept. She noted that a reader without prior knowledge might interpret the document as simply a subset of 1131 rather than understanding it defines what a CDMS must do.
+
+Discussion followed about terminology and the WMO document hierarchy. David clarified that WMO has a formal approval process for Manuals, Guides and Guidelines, and this document would either become an annex to 1131 or a standalone numbered document. Denis noted the distinction (common in France and elsewhere) between functional specifications (from the owner's perspective) and technical specifications (for developers), and suggested that terminology consistent with both WMO and OGC/technical contexts be clarified.
+
+Dwayne observed that this document is more specific than 1131 — it takes the high-level specification further and defines how things should be done.
+
+Ian and Ge Peng were assigned to the new GitHub issue to resolve the terminology before finalising the document.
+
+==== 2.7.2 Station Terminology
+
+Ge Peng asked whether the use of "stations" in the introductory text (referring to management of observations from stations) is intentionally broad or should be more specific. Xavier clarified that "station" was used broadly to encompass fixed stations, buoys, ships and similar, specifically to differentiate from satellite or forecast data.
+
+Denis noted that WIGOS uses related terminology including "platform" and suggested a glossary aligned with WMO definitions would help readers. He offered to review existing WMO term definitions. Dwayne supported keeping the term general. Ian agreed to keep it broad for now but created a GitHub issue to clarify the relationship between station, platform and host, and to ensure alignment with WIGOS terminology. David added relevant definitions from the meeting chat to the issue.
+
+Ian and Denis were assigned to this issue.
+
+==== 2.7.3 Document Audience
+
+Dwayne noted that the document is useful not only for developers but also for climate specialists within met services who use the CDMS to verify it meets their requirements. Ian agreed this should be reflected in the document's description of its intended audience. He had already shared the document with two climate specialists in Jamaica and Belize for this purpose.
+
+=== 2.8 Section Allocation for Document Review
+
+Ian asked team members to identify which sections of the document they wish to focus on for detailed technical review, in addition to reading through the document as a whole. The focus for the team should be technical correctness, though editorial changes are also welcome.
+
+David will update the GitHub issues (which are structured by chapter/section) and assign members once they confirm their preferred sections by e-mail. A copy of the latest version of the document will be sent to all members.
+
+Ge Peng confirmed that review feedback should cover both technical correctness and completeness. Editorial improvements are encouraged but should be addressed before the document is sent to wider groups.
+
+== 3. Key Decisions
+
+* Meeting notes from 23 January approved and merged
+* Pull request incorporating Xavier's document changes merged into the main branch
+* GitHub quick start guide to be drafted as a Word document by Ian, then circulated to other expert teams
+* Document to be published via GitHub Pages with versioned releases after each meeting
+* New GitHub issues created for: use of "specification" terminology; station/platform/host terminology
+* Target date for circulating the draft to the wider ET-IM team: 1 May 2026
+* Final deadline for the document: end of July 2026
+
+== 4. Action Items
+
+=== Ian Edwards
+
+* Complete GitHub quick start guide as a Word document; circulate to other expert teams and Secretariat for input
+* Ensure Xavier is added to the GitHub project (check via his e-mail or submitted GitHub profile)
+* Reread Chapter 1 and the use of "specification" throughout the document; contribute to resolving the terminology issue (GitHub issue assigned)
+* Resolve station/platform/host terminology issue (GitHub issue assigned)
+
+=== David Berry
+
+* Set up GitHub Pages publication for the CDMS functional requirements document with auto-versioned releases (PDF, Word and web versions)
+* Send Doodle poll for next meeting (weeks of 23rd and 30th March)
+* Update GitHub issues to reflect latest document structure; remove abstract test suite references from milestones
+* Assign team members to section issues once they confirm their focus areas by e-mail
+* Send all team members the latest version of the document
+* Add station/platform definitions (shared in meeting chat) to the station terminology GitHub issue
+
+=== Ge Peng
+
+* Review and confirm resolution of station/platform/host terminology issue (assigned to GitHub issue)
+
+=== All Team Members
+
+* E-mail David to confirm which section(s) of the document they wish to focus on for detailed review
+* Read through the document in full; submit any issues or proposed changes via GitHub or e-mail
+* Focus on technical correctness and completeness; editorial changes also welcome
+
+== 5. Date and Time of Next Meeting
+
+*Date:* To be determined via Doodle poll (week of 23rd or 30th March 2026)
+
+*Time:* 1200 - 1330 UTC (to be confirmed)
+
+*Purpose:*
+
+* Review progress on section allocation and document review
+* Discuss any proposed changes or issues raised
+* Check status of terminology issues
