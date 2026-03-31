@@ -1,0 +1,156 @@
+= ET-IM-SG2 30th March 2026 Teleconference
+
+30 March 2026 13:57 - 15:37 UTC
+
+== 1. Participants
+
+*Chair:* Ian Edwards
+
+*Participants:* Charlotte McBride, Denis Stuber, Etna Cervantes, Ge Peng, Liu Yiming, Patrick Munyoki, Peter Thorne, William Wright
+
+*Secretariat:* David Berry, Washington Otieno
+
+== 2. Summary
+
+=== 2.1 Overview
+
+This meeting covered approval of the 6 March meeting notes, review of open actions, merging of the Contributing guide into the CDMS functional requirements repository, a walkthrough of GitHub Pages publication, a detailed review of a pull request incorporating further document updates, discussion of homogenization scope, guidance on how team members can contribute, and planning for the next meeting.
+
+=== 2.2 Review and Approval of Previous Meeting Notes
+
+Ian walked through the open pull request for the 6 March meeting notes in the ET-IM GitHub repository, reviewing key agenda items: confirmation that the abstract test suite was postponed, progress on the GitHub Quick Start guide, document publication via GitHub Pages, the merged pull request incorporating Xavier's changes, terminology issues raised (use of "specification" and station terminology), and section allocation for document review. The pull request was approved and merged. Ian confirmed the May 2026 target for sharing the first draft with the wider ET-IM team and the end-of-July 2026 final deadline remain unchanged. David confirmed these deadlines are driven by the need to submit documents into the WMO internal system in late August or early September ahead of INFCOM.
+
+=== 2.3 Review of Actions from Last Meeting
+
+Ian reviewed outstanding actions:
+
+* *GitHub Quick Start guide* — In progress; see section 2.4.
+* *Xavier added to GitHub project* — Confirmed, as evidenced by his contributions.
+* *Chapter 1 scope and use of "specification"* — Ge Peng completed her Chapter 1 review and submitted her write-up. Her changes, along with edits addressing the use of "specification", were incorporated in the pull request reviewed and merged at this meeting (see section 2.6). Issues closed on merge.
+* *Station/platform/host terminology* — GitHub issue open; Denis contributed relevant definitions by email. Denis, Peng, and Ian are assigned.
+* *GitHub Pages setup* — Completed; see section 2.5.
+* *Doodle poll for next meeting* — Completed.
+* *GitHub issues to reflect latest document structure* — David confirmed done.
+* *Assign team members to sections* — In progress.
+* *Send latest document version* — Completed.
+
+Ian noted that GitHub Pages now has a link in the repository's About panel providing the latest compiled version of the document. David confirmed that a release is required to trigger the document build.
+
+Ian noted that GitHub provides a filtered view showing only the issues assigned to a specific user within a project. He committed to finding that link and including it in the Contributing guide, so that team members new to GitHub can quickly see their own assigned issues without browsing the full list.
+
+=== 2.4 Contributing Guide
+
+Ian presented a draft Contributing guide (contributing.md) as a pull request in the cdms-functional-requirements repository. The guide explains how to navigate the repository, use issues and pull requests, find the relevant chapter directory, and edit document text directly in GitHub. It references a WMO style guide and includes a link to the document used as a template basis.
+
+Following discussion, David approved the pull request and it was merged. Ian noted the guide is deliberately lightweight and invited team members to identify gaps when they try to use it. The team agreed to email the link to all members.
+
+Ian proposed that WMO could maintain a repository of templates for different types of GitHub-based teams and documents (e.g., an expert team template and a document template), so that consistent structure, licensing, contributing information, and automated build workflows could be reused across teams. David stated he thought this would be supported. It was agreed to discuss this further as a follow-up.
+
+=== 2.5 Document Publication via GitHub Pages
+
+David confirmed that a GitHub Actions workflow has been set up in the cdms-functional-requirements repository to compile and publish the document. The About panel on the repository homepage now provides a link to the latest HTML, PDF, and Word versions of the document. The document is only updated when a release is made, at which point the version number is also incremented in the compiled documents.
+
+Ian asked that a change log file be created alongside each release, so the summary of changes is preserved in the repository rather than only in the pull request description.
+
+=== 2.6 Pull Request Review — Version 0.3
+
+David walked the team through an open pull request incorporating further revisions to the document, based on the remaining issues raised by Xavier and Ge Peng, as well as other updates. The changes addressed the following:
+
+* *System architecture diagram (Figure 1)*: Arrow between CDMS and WIS2 corrected to bidirectional, reflecting that data flows both from WIS2 into the CDMS and from the CDMS out to WIS2. William noted that access to WIS2 global services (e.g., satellite imagery or NWP output) could also support CDMS quality control functions; David confirmed this flow is already captured in the diagram. Coloring of boxes corrected so that external systems (e.g., climate data store, data rescue) are clearly distinguished from the central CDMS components. Legend unchanged.
+* *Terminology*: "System operator" renamed to "system administrator" throughout.
+* *Chapter 2*: Clarified that the user interface is a requirement, not a recommendation.
+* *Class 1 (core conformance class)*: Several clarifications including: mobile platforms confirmed in scope; geographic location requirements for fixed versus mobile stations clarified; radiosondes noted as an example of observations with varying location; storage of non-WIGOS metadata and alternative station identifiers made explicit; quality control thresholds noted as potentially dynamically derived; reprocessing of previously checked observations can be triggered on demand as well as on a schedule; buddy checks and neighbouring station checks simplified and clarified.
+* *Data formats*: Explicit reference to hourly observations and daily and monthly summaries in BUFR; FM12 SYNOP and FM71 CLIMAT at minimum; other code forms as required. In the issue comment, Xavier questioned whether the team needed to include IWXXM. IWXXM are implicitly included, but there is no need to explicitly do so, noting the scope of the WMO vs ICAO. See also 2.6.1 below.
+* *API documentation*: Recommendation to document the CDMS API using the OpenAPI standard made explicit.
+* *Homogenization spelling*: Updated to use "-ize" form consistent with WMO style guide.
+* *WMDR references*: Made version-agnostic (refers to WMDR without specifying version 1 or version 2), as WMDR v2 is still in progress.
+* *Data rescue*: Typo corrected.
+* *Metadata history*: Clarified as a CDMS requirement, not a metadata standard requirement.
+* *Dataset quality reporting*: Clarified as potentially automatic or manual. A reference to GCOS monitoring requirements was removed as out of place (more relevant to the stewardship maturity matrix / WDQMS).
+
+Ian updated the pull request description to include "closes #NN" references for all resolved issues, so they would close automatically on merge. The pull request was merged. The open issue count dropped from 53 to 32.
+
+Remaining open items parked for future discussion: fixed versus mobile station scope and terminology; whether mandatory/optional distinctions should be specified in API calls; standardisation of quality flags.
+
+==== 2.6.1 Discussion: ICAO Aviation Formats
+
+Peter Thorne raised a concern about the note that IWXXM/ICAO formats are out of scope, arguing that high-frequency aviation weather observations (e.g., thunderstorm downdraft data) are scientifically valuable and should not be implicitly excluded from national archives. David confirmed the intent is not to exclude them from archiving, and that the note is only in the comment replying to Xavier rather than the functional requirements. David noted that from a political perspective, keeping the document simple and not explicitly mentioning IWXXM and other aviation formats would avoid opening discussion over the scope of WMO versus ICAO. Peter was satisfied provided there is no explicit exclusion. William asked whether there were similar political complications for IOC and ocean data; David replied that there were not — marine data collected in the context of WMO, IOC, or GOOS programmes is in scope without complication.
+
+==== 2.6.2 Discussion: Homogenization in Figure 1 and Introductory Text
+
+Denis raised a concern that "homogenization" appears prominently in Figure 1 and in the introductory text of Chapter 1, giving the impression it is a core or mandatory function of a CDMS, when in fact it is a recommended function and not widely implemented in current CDMS products. He noted that normals data, for example, might be a more fundamental function to highlight.
+
+David confirmed that homogenization is already treated as a recommended function in a later chapter, and that WMO-No. 1131 lists it as recommended rather than required. The team agreed to remove "homogenization" from Figure 1 and from the introductory text in Chapter 1, retaining only "long-term climate data management" in that context. Denis was asked to raise a GitHub issue proposing updated text and any other concerns (e.g., normals data, return periods).
+
+William noted the CDMS definition in WMO-No. 1131. Denis confirmed that WMO-No. 1238 is the authoritative source. David shared the following definition from WMO-No. 1238 in the meeting chat:
+
+____
+_Climate data management system (CDMS). A system that facilitates the effective archival, management, analysis, delivery and utilization of a wide range of climate data. According to Climate Data Management System Specifications (WMO-No. 1131), a CDMS combines both IT and governance components. It utilizes a set of interrelated modules that perform specific functions with the data. The purpose of a CDMS is to assist a Member, often through its NMHS, to manage its climate record securely and sustainably._
+____
+
+William and Denis agreed this definition should be adopted in the document. As it is too long to use verbatim, William was asked to propose a one-line summary for use in the introductory text.
+
+==== 2.6.3 Discussion: Document Scope
+
+William sought clarification on whether the document describes requirements for a self-contained software package or a broader system. David explained that the CDMS is not a single software package but a system comprising multiple components (database, data catalogue, API, file storage, etc.). This document specifies what the system must do functionally, not how it should be implemented.
+
+=== 2.7 How to Contribute
+
+Ian outlined three levels of GitHub contribution for team members, from simplest to most direct:
+
+. Create a new issue via the provided link, describing the change or concern.
+. Find an existing issue for the relevant chapter or section and add a comment.
+. Navigate to the relevant text file in the repository, click the edit (pen) icon, make the change, and submit a pull request.
+
+David confirmed that branch protection is in place, so no changes can be accidentally merged without review — team members should not be concerned about making mistakes. A fourth option for those unfamiliar with, or unable to work with due to e.g. institutional policies,  GitHub is to send proposed changes by email to Ian or David, who will add them on their behalf.
+
+David noted that team members who are not on GitHub can still volunteer to review a chapter by email, and their assignment will be tracked in GitHub by Ian or David.
+
+=== 2.8 Section Allocation for Document Review
+
+Ian and David confirmed that sections are being assigned to team members via GitHub issues. David will email each member individually to confirm their preferred chapter(s) and collect GitHub handles where not yet provided.
+
+== 3. Key Decisions
+
+* Meeting notes from 6 March approved and merged
+* Contributing guide added to cdms-functional-requirements repository
+* Pull request incorporating further document revisions merged (version 0.3), automatically closing ~21 issues (open issues reduced from 53 to 32)
+* Homogenization to be removed from Figure 1 and introductory text of Chapter 1; retained as a recommended function later in the document
+* ICAO/IWXXM formats: not explicitly excluded from archiving; left implicit in scope to avoid ICAO/WMO political complications
+* WMDR references to remain version-agnostic
+* Change log file to be created before the next document release
+* Next meeting: week of 27 April 2026, Wednesday, 1200 UTC
+
+== 4. Action Items
+
+=== Ian Edwards
+
+* Email link to contributing file and link to latest document version (About panel) to all team members
+* Find the GitHub URL that filters project issues by assignee and include it in the Contributing guide, so team members can easily see their own assigned issues
+* Discuss WMO GitHub template repository proposal with David as a follow-up
+
+=== David Berry
+
+* Create changelog file for version 0.3 before making the next release
+* Make version 0.3 release and email team with link to the latest compiled document
+* Update Figure 1 and introductory text of Chapter 1 to remove "homogenization"; replace with "long-term climate data management"
+* Add chapter/section labels to all open issues in cdms-functional-requirements
+* Email team members individually to confirm chapter assignments and collect GitHub handles
+* Send meeting invitation for week of 27 April 2026 (Wednesday, 1200 UTC)
+* Follow up on WMDR v2 timeline in relation to INFCOM deadline
+
+=== William Wright
+
+* Raise a GitHub issue noting the need to include dataset maturity (stewardship maturity matrix) under dataset quality
+* Propose a one-line summary of the CDMS definition from WMO-No. 1238 for use in the document introductory text
+
+=== All Team Members
+
+* Review assigned chapter(s) and submit issues or proposed changes via GitHub or email before end of April
+* If not yet on GitHub or not yet assigned to a chapter, contact David by email to confirm chapter preference and provide GitHub handle
+
+== 5. Date and Time of Next Meeting
+
+*Date:* Wednesday, week of 27 April 2026 (not Monday 27th)
+
+*Time:* 1200 UTC
