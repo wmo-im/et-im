@@ -1,0 +1,172 @@
+= WORLD METEOROLOGICAL ORGANIZATION (WMO)
+
+INFCOM SC-IMT
+
+'''
+
+*Expert Team on Information Management* +
+Original Language: English
+
+*ET-IM-SG1 31st March 2026 Teleconference* +
+31 March 2026 12:02 – 13:12 UTC
+
+== 1. Participants
+
+*Chair:* Ge Peng
+
+*Participants:* Axel Andersson, Denis Stuber, Etna Cervantes, Feng Gao, Liu Yiming, Peter Thorne
+
+*Secretariat:* David Berry
+
+*Written comments submitted:* Charlotte McBride, William Wright
+
+== 2. Summary
+
+=== 2.1 Overview
+
+The meeting focused on working through reviewer comments on Chapter 3 of the revised WMO-No. 1238, using a consolidated tracked-changes document shared by David. Axel Andersson and Peter Thorne were only available for the first 30 minutes. Liu Yiming's comments, submitted by email shortly before the meeting, were not reached and were deferred to the next meeting. The review of the previous meeting notes was also deferred in order to prioritise Chapter 3.
+
+=== 2.2 Chapter 3 Review
+
+==== 2.2.1 Entity Compliance — Shall vs Should (Denis's Comment)
+
+Denis raised a concern that it could be difficult for members to ensure entities (Type 1 and Type 2) comply with WMO requirements. The original text placed the obligation on the entity to establish and document data management capabilities and practices; the revised text transfers the obligation to the member, who shall ensure the entity does so. Denis acknowledged the logic, noting the risk is whether this will be accepted at INFCOM given the sensitivity around "shall" versus "should." Axel noted that entities subject to specific accreditation processes may already be expected to comply. Ge Peng supported retaining "shall", noting that the purpose of the Manual is to establish requirements. The team agreed to retain "shall" with the obligation placed on the member.
+
+==== 2.2.2 Discovery Metadata Clarification (William's Comment)
+
+William proposed inserting the word "discovery" to clarify that the metadata being referred to is discovery metadata. David noted this as a straightforward clarification and accepted the change.
+
+==== 2.2.3 Climate Metadata Reference and Fast-Track Process (William's Comment)
+
+William proposed adding a note that the required climate metadata is set out in WMO-No. 1131, in relation to plans to request an extension to the WCMP2 standard to include climate metadata. David noted this and indicated the manual may also be incorporated into a fast-track update process, enabling updates twice a year rather than once every two to four years.
+
+==== 2.2.4 Data Licensing — Core Data (Ge Peng and Denis's Comments)
+
+Ge Peng noted that the text requires only a "should" for assigning a license to core data, which may seem inconsistent — one might expect core data (which must be free and open) to carry a stronger obligation. David explained the background: when the unified WMO data policy was drafted, there was a deliberate decision not to require core data to be licensed, because licensing can imply restrictions. Licenses such as CC0 or CC BY can be used with core data and do not restrict use. The WIS2 metadata standard similarly treats licensing as a recommendation (or permission) for core data but a requirement for recommended data.
+
+Ge Peng suggested adding a note to explain that core data must be free and open, with a reference to the unified data policy, so readers understand why the recommendation is a "should" rather than a "shall." David agreed to add this note.
+
+==== 2.2.5 Provenance Metadata — Shall vs Should (William's Comment)
+
+William proposed strengthening the provenance metadata requirement to "shall." David argued that, for it to be a "shall," the majority of members must be able to comply, and many members and entities currently do not record provenance metadata in a structured way. Denis noted that WMO-No. 1131 encourages provenance but does not make it a requirement. Ge Peng agreed, noting that even mature data centres such as NASA and NOAA are still working on provenance implementation. The team retained "should," with Ge Peng noting this could be revisited in a future edition once the practice is more widespread.
+
+==== 2.2.6 Data Life Cycle — Quality Control (William's Addition)
+
+William proposed adding "through quality control" to the description of the data life cycle: initial reception, through quality control, intermediate processing steps, and final publication and exchange. David accepted this as a minor addition with no objection from the team.
+
+==== 2.2.7 Section 3.3.1.3 — Recording Origin of Externally Sourced Data
+
+William had added text to section 3.3.1.3 requiring entities to associate individual records with their relevant source, with particular emphasis on externally sourced data. Axel and Denis noted the text was difficult to read. Peter Thorne observed that the requirement is harder to fulfil for externally sourced data, where the entity has less control, making the emphasis on external data somewhat counter-intuitive.
+
+Ge Peng and David questioned whether the requirement in 3.3.1.3 was redundant with the existing text of 3.3.1.2, which already requires documenting the origin of raw observations and whether data are internally or externally sourced. David noted the intent of 3.3.1.3 — linking individual records in a database to their specific source — is captured in the existing provision. Denis agreed the text is important conceptually but needs to be simplified and better grounded with an example. David agreed to simplify the text and consider whether 3.3.1.3 is needed as a separate provision, and flagged it for further discussion. He noted a marine domain example could be provided if needed.
+
+==== 2.2.8 Quality Control: Record-Level vs Dataset-Level (Denis's Comment)
+
+Denis raised a concern about section 3.3.2.1, which requires entities to subject all climate data sets to quality control and record the result in the dataset metadata. He noted that in practice, quality control in the climate community is applied record by record, and that requiring a quality assessment at the dataset level is less common and less well established. He distinguished between:
+
+* Record-level QC: standard practice, with quality flags per observation; and
+* Dataset-level quality assessment: less common, involves assigning an overall quality indicator to a dynamically assembled dataset.
+
+Denis suggested introducing a reference to WMO-No. 1131, which addresses both types of quality assessment, in order to introduce the concept to the community. Ge Peng expressed some caution about overcomplicating the provision but agreed a note with a reference to 1131 could be useful. Denis volunteered to review WMO-No. 1131 and propose wording for a note distinguishing the two levels of quality assessment. David accepted this as an action on Denis.
+
+==== 2.2.9 Homogenization in Provenance Metadata (Denis's Comment)
+
+The existing text required entities to record in the provenance metadata any homogenization and reprocessing carried out on the data. Denis argued that the scope should be broadened: only around 40% of members carry out homogenization, but many carry out other significant data processing (calculation of normals, return periods, data merging/fusion, reconstruction). He proposed that homogenization be cited as one example of a broader class of data processing that should be documented.
+
+David clarified that this provision is specifically about homogenization from a data quality assurance perspective, and pointed out that the full data processing history — covering what has been done with the data throughout its lifecycle — is already addressed in a separate section of the document. Denis acknowledged this, noting that the specific provision and the broader processing history section together address his concern. No change to the homogenization provision text was agreed.
+
+=== 2.3 Schedule, INFCOM Timeline, and External Review
+
+==== 2.3.1 Remaining Chapter 3 Items
+
+The team did not finish all Chapter 3 comments: Liu Yiming's comments (submitted by email before the meeting) and some remaining items were not reached. These will be addressed at the next meeting. Denis also made several comments on Chapter 2 that have not yet been discussed; David confirmed these have been noted and will be returned to in the final pass through the document.
+
+==== 2.3.2 Meeting Schedule
+
+Ge Peng proposed extending meetings from 60 to 90 minutes, noting the discussion volume requires more time. David agreed and will update meeting invites. The agreed schedule is:
+
+* *5 May 2026*: Continue Chapter 3 (Liu Yiming's comments and remaining items); Chapter 4 if time permits
+* *19 May 2026*: Full document review / remaining chapters
+* *2 June 2026*: Additional meeting (new) for overflow and final review
+
+David will add the 2 June meeting to the calendar. Ge Peng confirmed that team members should review Chapters 4 and 5 and send comments before the 5 May meeting.
+
+==== 2.3.3 INFCOM Submission Timeline
+
+David confirmed the hard deadline for submitting documents into the WMO INFCOM workflow is late August or early September. The team's target is to have documents ready by end of July, allowing time for collation over the summer. David confirmed these deadlines are unchanged from the previous update.
+
+==== 2.3.4 External Review
+
+The team discussed which bodies should receive the document for informal review before INFCOM submission. The agreed approach is to seek input from:
+
+* *ET-DDS* — Denis confirmed ET-DDS has a meeting on 1 April 2026; the next meeting is approximately six weeks later (early June). Ge Peng and David aim to attend the early June ET-DDS meeting.
+* *ET-CIDS* (Expert Team on Climate Services Information System for Decision Support) — Denis noted this team relies heavily on data management and data exchange, and that ET-IM has already contributed to their documents.
+* *ET-MCVC* — noted by David in relation to previous discussions.
+* *SC-ON* — Ge Peng raised this; David confirmed he will engage with Kruno (his WIGOS colleague) to find an appropriate time to present changes or seek input by email.
+
+David noted the objective is informal consensus-building and documented engagement, not formal review — for example, recording that the document was on the ET-DDS agenda on a given date. Denis agreed this approach reduces the risk of objections later.
+
+==== 2.3.5 Information Document and Changes Summary
+
+David proposed preparing two supporting documents for the INFCOM submission:
+
+. *Summary of changes*: a Word document explaining what has been changed and why, to help reviewers understand the document without needing to read the full tracked-changes version. David indicated he would begin this sooner rather than later.
+. *Information document*: a separate document describing the process followed — the interaction between SERCOM and INFCOM, the December co-chairs meeting, the engagement with expert teams and standing committees in June–July, and the rationale for the changes.
+
+Ge Peng and Denis supported both documents. Denis suggested the information document could also note that ET-IM is not trying to make major changes, but rather clarifying what members have agreed to do.
+
+== 3. Key Decisions
+
+* Retain "shall" for member obligation to ensure entities establish data management capabilities (obligation placed on the member, not the entity directly)
+* Provenance metadata: retain "should" (not "shall") given current implementation challenges across members
+* Section 3.3.1.3 (individual record provenance for externally sourced data): to be simplified; may be consolidated with 3.3.1.2; action on David
+* Dataset-level QC: add a note referencing WMO-No. 1131 to introduce the concept of dataset-level quality assessment alongside record-level QC; Denis to propose wording
+* Add a note in the data licensing section explaining that core data must be free and open, with reference to the unified data policy
+* Liu Yiming's comments on Chapters 3.2.1 (findability/accessibility split) deferred to the next meeting
+* Meetings extended to 90 minutes from 5 May; 2 June meeting added to the schedule
+
+== 4. Action Items
+
+[cols="3,2,1"]
+|===
+| Action | Owner | Due Date
+
+| Update meeting invites to 90 minutes; add 2 June 2026 meeting to calendar
+| David Berry
+| After meeting
+
+| Simplify section 3.3.1.3; assess whether it is needed alongside 3.3.1.2; flag for further discussion
+| David Berry
+| Before 5 May meeting
+
+| Add note to data licensing section explaining core data must be free and open, with reference to the unified data policy
+| David Berry
+| Before 5 May meeting
+
+| Begin drafting summary of changes Word document for wider review
+| David Berry
+| TBD
+
+| Begin drafting information document describing the process followed and rationale for changes
+| David Berry
+| TBD
+
+| Engage SC-ON (via Kruno) to present changes or seek input by email
+| David Berry
+| TBD
+
+| Propose wording for a note distinguishing record-level QC from dataset-level quality assessment, referencing WMO-No. 1131
+| Denis Stuber
+| Before 5 May meeting
+
+| Review Chapters 4 and 5 and send comments to the group
+| All
+| Before 5 May meeting
+
+|===
+
+== 5. Next Meeting
+
+* *5 May 2026* (90 minutes): Continue Chapter 3 (Liu Yiming's comments and remaining items); proceed to Chapter 4 with remaining time
+* *19 May 2026* (90 minutes): Remaining chapters and full document review
+* *2 June 2026* (90 minutes): Additional session for overflow and final review
