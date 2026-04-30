@@ -1,0 +1,225 @@
+= ET-IM-SG2 29th April 2026 Teleconference
+
+29 April 2026 12:02 - 13:30 UTC
+
+== 1. Participants
+
+*Chair:* Ian Edwards
+
+*Participants:* Charlotte McBride, Denis Stuber, Dwayne Scott, Etna Cervantes, Ge Peng, Liu Yiming, Patrick Munyoki, Peter Thorne, William Wright, Xavier Perrot
+
+*Secretariat:* David Berry
+
+== 2. Summary
+
+=== 2.1 Overview
+
+This meeting covered approval of the 30 March meeting notes, review of open actions, assignment of team members to chapters and sections of the CDMS functional requirements document, discussion of document scope and the minimum requirements principle, discussion of data models and interoperability, and planning for the next two meetings.
+
+=== 2.2 Review and Approval of Previous Meeting Notes
+
+Ian walked through the open pull request for the 30 March meeting notes in the ET-IM GitHub repository, reviewing the key agenda items: the Contributing guide, document publication via GitHub Pages, the merged pull request incorporating further document revisions (version 0.3), discussion of homogenization, and section allocation for document review.
+
+Ian confirmed that the May 2026 target for sharing the first draft with the wider ET-IM team and the end-of-July 2026 final deadline remain unchanged.
+
+The pull request was approved and merged by Ian.
+
+=== 2.3 Review of Actions from Last Meeting
+
+Ian confirmed the following actions from the previous meeting as completed:
+
+* *GitHub Quick Start guide* — Completed and merged.
+* *Xavier's changes merged* — Completed.
+* *Ge Peng's changes merged* — Completed.
+* *GitHub Pages setup* — Completed by David.
+* *Doodle poll for next meeting* — Completed.
+* *GitHub issues updated to reflect latest document structure* — Completed by David.
+* *Latest document version circulated* — Completed.
+
+The following remained outstanding or in progress:
+
+* *Station/platform/host terminology* — GitHub issue still open; not anticipated to be a serious issue.
+* *Assign team members to sections* — In progress; addressed in this meeting (see section 2.4).
+
+=== 2.4 Section Assignment for Document Review
+
+David shared his screen to walk through the open issues in the cdms-functional-requirements GitHub repository. There were no open pull requests at the time of the meeting. The team went through chapters and sections of the document, assigning reviewers.
+
+The following assignments were agreed and recorded in the corresponding GitHub issues in the cdms-functional-requirements repository:
+
+[cols="2,3"]
+|===
+| Chapter / Section | Reviewer(s)
+
+| Chapter 1 — Scope (Issue #5)
+| Ge Peng
+
+| Chapter 2 — Conformance (Issue #6)
+| Ian Edwards
+
+| Chapter 4 — Terms and Definitions (Issue #8)
+| All reviewers asked to flag terms needing addition as they work through their assigned chapters
+
+| Requirement Class 1 — Core (Issue #12)
+| Denis Stuber
+
+| Requirement Class 2 — Quality Control (Issue #13)
+| Ge Peng, William Wright, Liu Yiming; Blair Trewin via William Wright (ET-MCCVC)
+
+| Requirement Class 3 — Data Ingestion (Issue #14)
+| William Wright, Etna Cervantes
+
+| Requirement Class 4 — Data API (Issue #15)
+| Etna Cervantes
+
+| Requirement Class 5 — Homogenisation (Issue #16)
+| Denis Stuber; Blair Trewin via William Wright; ET-DDS colleagues via Denis Stuber (José)
+
+| Requirement Class 6 — Data Rescue (Issue #17)
+| William Wright, Liu Yiming, Charlotte McBride
+
+| Requirement Class 7 — Metadata (Issue #18)
+| Ge Peng, William Wright, Liu Yiming
+
+| Requirement Class 8 — User Interface (Issue #19)
+| Etna Cervantes
+
+| Requirement Class 9 — Climate Products (Issue #20)
+| Denis Stuber (plus proposed split into computation and products; see section 2.9)
+
+| Requirement Class 10 — Automation (Issue #21)
+| Liu Yiming, William Wright
+
+| Requirement Class 11 — Performance (Issue #22)
+| Etna Cervantes (technical note on query performance; see section 2.10)
+
+| Chapter 7 — Non-functional Requirements (Issue #11)
+| Dwayne Scott, Patrick Munyoki
+
+|===
+
+Patrick noted that he had not been aware of the chapter-level issue structure and had been raising separate issues independently. He confirmed he would close his separately created issues and add his comments to the corresponding chapter issues instead. David reiterated the general point that all team members should add comments to the relevant chapter issues to confirm their review. It is important that even a "no further comments — I agree with what is written" response is recorded: this provides provenance and allows the team to demonstrate that the team has systematically reviewed the document. Team members unable to add comments directly in GitHub should send feedback by email to Ian or David, who will enter it on their behalf.
+
+=== 2.5 Document Timeline
+
+David confirmed the following milestones:
+
+* *Next meeting (13 May 2026):* Two-week review period; team should aim to have chapter feedback ready. After this meeting, the document will be shared with the wider ET-IM team and with ET-DDS.
+* *ET-DDS meeting:* End of May 2026.
+* *End of May 2026:* A second review meeting planned for the Thursday of that week, scheduled on Thursday to avoid a clash with ET-DDS.
+* *End of July 2026:* Final deadline for the CDMS functional requirements document.
+
+Ian emphasised that the next two weeks are an important period for the document. Peter Thorne and others noted this is approaching the end of the cycle, and that team members should treat this as a call for final contributions.
+
+David noted that a separate summary document for INFCOM is also being drafted (with Enrico and Peer), covering the work of both SG1 (review of WMO-No. 1238) and SG2 (CDMS functional requirements) and including recommendations for the next intersessional period. He hoped to share an initial version within the next couple of weeks.
+
+=== 2.6 Discussion: Document Scope and Minimum Requirements
+
+Peter Thorne raised a concern that the team repeatedly revisits decisions that have already been made — in particular, the deliberate decision to restrict the document to minimum, essential components. He noted that as the team considers bringing in additional external reviewers, there is a real risk that those reviewers, without a clear briefing on past decisions, could pull the document in different directions. He suggested that the minimum scope remit should be re-stated at the start of each meeting.
+
+Ian clarified the practical meaning of "minimum requirements" in this document: mandatory requirements are written as "shall" and represent the minimum set; non-mandatory guidance is written as "should" and may remain in the document to provide context, ideally linked back to the relevant "shall" requirement. The goal is not to cull all non-mandatory content, but to ensure that the "shall"/"should" distinction is applied carefully and consistently.
+
+David confirmed this framing and noted the importance of the usability and maintainability requirements (requirement class 14) in ensuring that systems remain accessible and maintainable over time, including the ability to migrate data to a different system.
+
+Peter reiterated that the document is effectively being written for smaller national meteorological and hydrological services (NMHS) that may have limited resources and technical capacity. Producing a complex, over-specified document risks discouraging exactly the members who most need CDMSs. He noted that larger, well-resourced services are probably already compliant; the document should be kept as simple as possible for those who are not.
+
+Ian noted a complementary perspective: one of the medium-term goals of this work is to be able to assess whether a given software product conforms to the document's requirements, so that small countries can make an informed choice between available products rather than building their own. In that case, the document does not need to be actionable by a country building a CDMS themselves — it needs to be checkable.
+
+Denis observed that even large services find CDMS development complex today, given the number of standards involved. He suggested the document's most useful function may be to push existing free and open-source CDMS products (such as Climsoft and MCH) to adopt and demonstrate conformance with the standard.
+
+Dwayne confirmed that he had shared the document with climate personnel in several Caribbean countries (including Jamaica) for feedback and was checking requirements with those users in mind. Patrick noted he was reviewing the document in the context of African countries. William was reviewing with the 15+ Pacific Island countries and territories he works with in mind. Dwayne supported the minimum requirements approach but noted that developers of existing CDMS products being on the team is a strength: they are already checking their own systems against the requirements and flagging where the requirements may not be achievable.
+
+David took an action to work with Ian to ensure clear communication of the document's scope — both internally at the start of future meetings and externally to any reviewers being brought in.
+
+=== 2.7 Technical Discussion: Station Grouping
+
+Denis suggested adding a requirement for the ability to group stations, which he described as a capability that saves significant operational effort. Station groups might be defined by administrative geography (country, region, department), observing network role (G-BON, urban, etc.), or other criteria. He noted this functionality is important for applying workflows and products at the group level rather than station by station.
+
+David agreed and identified two distinct aspects: (a) the ability to assign a station to one or more named groups, and (b) the ability to define and apply workflows or products to a group of stations. He confirmed these would be added to the document.
+
+=== 2.8 Discussion: Data Model and Non-proprietary Formats
+
+Dwayne asked whether the document would require adherence to a specific data model (in particular, the WMO climate data model, CDM). David explained that requirement class 1 specifies that the system must implement a data model capable of storing the required data, and that the CDM will be included as an informative resource at the end of the document. The document aims to remain implementation-agnostic and will not mandate a specific data model.
+
+Peter clarified that a data model is distinct from a data format and from how data is physically stored. The risk to avoid is data stored in proprietary formats that may not be readable in future decades. The document should recommend the use of non-proprietary, open formats.
+
+Ian noted that the CDM work did recommend a specific exchange format to support interoperability, and that a larger discussion on the CDM may be warranted when the INFCOM submission document is available.
+
+Patrick supported a platform-agnostic approach. He noted that the document already includes backup requirements referencing open standard formats, which partially addresses the lock-in risk.
+
+Denis mentioned the MeteoGate project, a European initiative developing APIs for data exchange and linkage. David noted that this work has influenced discussions within the WMO SG-Fit group on APIs (led by Jeremy Tandy, UK Met Office), and the two streams are related.
+
+David confirmed he would check whether the functional requirements already include a recommendation to use non-proprietary formats; if not, he would add it as a GitHub issue.
+
+=== 2.9 Discussion: Splitting the Climate Products Class
+
+Denis and Xavier both suggested that the current climate products requirement class should be split into two parts: one covering basic computation or derived parameter calculation, and one covering climate data products. Denis had sent an email earlier the same day with a proposal.
+
+David agreed to work with Denis directly on the text and numbering. He noted that requirement numbering is handled automatically by counters in the AsciiDoc source, so Denis only needs to provide the proposed text; David will integrate it into the markdown structure.
+
+=== 2.10 Query Performance Technical Note
+
+Etna Cervantes offered to write a technical note on query performance, covering general considerations applicable to different databases. She proposed this be included as a separate note at the end of the document rather than embedded in the functional requirements. David confirmed she had been assigned to the relevant issue.
+
+== 3. Key Decisions
+
+* Meeting notes from 30 March approved and merged
+* Section assignments made for all chapters of the CDMS functional requirements document
+* Document to be shared with wider ET-IM team and ET-DDS after the 13 May meeting
+* Minimum requirements framing confirmed: mandatory requirements use "shall"; non-mandatory guidance uses "should" and should be linked to a relevant "shall" where possible
+* Station grouping capability (assign stations to groups; apply workflows to groups) to be added to the document
+* Climate products requirement class to be split into computation and products, with Denis to provide text and David to integrate it
+* Non-proprietary formats recommendation to be checked and added as an issue if not already present
+* Etna to write a technical note on query performance for inclusion at the end of the document
+
+== 4. Action Items
+
+=== Ian Edwards
+
+* Include in team communications: all reviewers should check terms and definitions as they work through their chapters and flag any missing terms as a comment on issue #8
+* Work with David to draft clear scope communication for use at the start of future meetings and with external reviewers
+
+=== David Berry
+
+* Update Chapter 1 diagrams and introductory text to reflect Denis's homogenization comments
+* Send group email to all team members confirming section assignments; email individually those not regularly attending to check their status
+* Check if non-proprietary backup format requirement is already in the document; if not, raise as a GitHub issue
+* Add station grouping requirements to the document (assign stations to groups; apply workflows/products to groups)
+* Work with Denis on text for the split of the climate products class into computation and products
+* Work with Ian to draft clear scope communication for use at the start of future meetings and with external reviewers
+* Draft INFCOM submission document (with Enrico and Peer) combining SG1 and SG2 work and recommendations; share with the team within the next couple of weeks
+
+=== William Wright
+
+* Contact Blair (Bureau of Meteorology, currently at IPCC meeting in San Diego) to invite him to review the quality control and homogenization sections
+* Pass the current document draft to Simon and colleagues for feedback
+* Email David with preferred sections under Chapter 7 to review
+
+=== Denis Stuber
+
+* Share the homogenization/organization chapter with ET-DDS colleagues (including Jose) for feedback
+* Provide David with proposed text for the new computation class (split from climate products)
+
+=== Etna Cervantes
+
+* Write a technical note on query performance (general terms, covering different databases) for inclusion at the end of the document
+
+=== All Team Members
+
+* Review assigned chapter(s) during the next two weeks and post comments to the corresponding GitHub issues
+* In chapter issues, explicitly state whether you agree with the content, even if no changes are needed — a "no further comments" response provides provenance and helps demonstrate that the team has systematically reviewed the document
+* If unable to add comments in GitHub, send feedback by email to Ian or David
+
+== 5. Date and Time of Next Meetings
+
+*Next meeting:*
+
+*Date:* Wednesday 13 May 2026
+
+*Time:* 1200 UTC
+
+*Following meeting:*
+
+*Date:* Thursday, week of 25 May 2026 (Thursday to avoid clash with ET-DDS)
+
+*Time:* 1200 UTC
