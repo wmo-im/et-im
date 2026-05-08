@@ -48,7 +48,7 @@ Ge Peng suggested adding a note to explain that core data must be free and open,
 
 ==== 2.2.5 Provenance Metadata — Shall vs Should (William's Comment)
 
-William proposed strengthening the provenance metadata requirement to "shall." David argued that, for it to be a "shall," the majority of members must be able to comply, and many members and entities currently do not record provenance metadata in a structured way. Denis noted that WMO-No. 1131 encourages provenance but does not make it a requirement. Ge Peng agreed, noting that even mature data centres such as NASA and NOAA are still working on provenance implementation. The team retained "should," with Ge Peng noting this could be revisited in a future edition once the practice is more widespread.
+William proposed strengthening the provenance metadata requirement to "shall." David argued that, for it to be a "shall," the majority of members must be able to comply, and many members and entities currently do not record provenance metadata in a structured way. Denis noted that WMO-No. 1131 does require provenance, but that imposing it as a "shall" in WMO-No. 1238 would place too high a burden on Members, many of whom cannot yet meet that requirement; the aim should be to encourage rather than mandate. Ge Peng agreed, noting that even mature data centres such as NASA and NOAA are still working on provenance implementation. The team retained "should," with Ge Peng noting this could be revisited in a future edition once the practice is more widespread.
 
 ==== 2.2.6 Data Life Cycle — Quality Control (William's Addition)
 
