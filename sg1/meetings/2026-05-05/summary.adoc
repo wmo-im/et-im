@@ -1,0 +1,178 @@
+= WORLD METEOROLOGICAL ORGANIZATION (WMO)
+
+INFCOM SC-IMT
+
+'''
+
+*Expert Team on Information Management* +
+Original Language: English
+
+*ET-IM-SG1 5th May 2026 Teleconference* +
+5 May 2026 12:00 – 13:30 UTC
+
+== 1. Participants
+
+*Chair:* Ge Peng
+
+*Participants:* Alvaro Scardilli, Axel Andersson, Charlotte McBride, Denis Stuber, Etna Cervantes, Gao Feng, Liu Yiming, Peter Thorne, William Wright
+
+*Secretariat:* David Berry
+
+== 2. Summary
+
+=== 2.1 Review of previous meeting summary and actions
+
+David summarised the key topics from the last meeting: review of Chapter 3 comments (primarily from Denis and William), with additional comments from Liu Yiming to be addressed in this meeting. Covered areas included entity compliance (shall/should), discovery metadata clarification, WCMP2 and the fast-track process, data licensing for core data, provenance metadata, data lifecycle and quality control, origin of externally sourced data, record-level vs. dataset-level QC, references to WMO-No. 1131, homogenization, and the external review timeline.
+
+Outstanding actions reviewed:
+
+* Adding a note on why core data licensing uses "should" rather than "shall" — still to be done.
+* Two information documents for INFCOM (high-level changes summary and provision-by-provision summary) — in progress; David aims to circulate a draft by end of week or early next week.
+* David had a meeting with a WMO colleague (Kruno) the previous week to discuss engaging with SC-ON on the 1238 review.
+* Denis has an outstanding action to look at sections 3.3.1.3 and 3.3.1.2. Denis acknowledged this was overdue and will aim to complete it by the coming Friday; David offered to send a reminder.
+* All members to review Chapters 4 and 5 and send comments via the group email address.
+
+Denis raised a correction to the previous meeting summary: the notes implied that data provenance is not required in WMO-No. 1131, but Denis and William confirmed that provenance data is in fact a mandatory requirement in 1131. The requirement was debated during drafting of 1131 — not all NMHSs could necessarily meet it — but the consensus at the time was that it was important to emphasise as a future goal. Denis noted the distinction: being required in 1131 does not mean it should be a "shall" in Manual 1238; the aim in 1238 is to encourage Members to develop solutions for provenance and lineage without imposing a mandatory requirement at the higher level. David agreed to correct the summary.
+
+=== 2.2 Guidance on Chapter 3 review scope
+
+Ge Peng provided framing for the review:
+
+* This session addresses only outstanding review comments from SG1 members; discussions that have already reached team consensus will not be reopened.
+* The team will not introduce new requirements, particularly new "shalls". The goal is to remain consistent with the previous edition's provisions.
+* Notes or clarifications may be added to help Members understand requirements.
+* The primary purpose of this revision is consistency with other WMO Manuals and harmonisation ahead of INFCOM 4.
+
+=== 2.3 Chapter 3 review — FAIR principles (section 3.2)
+
+==== 2.3.1 Findability and Accessibility — section 3.2.1
+
+Liu Yiming (with colleague Gao Feng) proposed splitting the combined Findability and Accessibility section into two separate sections, noting the two principles have distinct meanings: findability relates to registration of metadata in WIS, while accessibility relates to whether data can be retrieved or downloaded.
+
+Ge Peng agreed in principle but noted that most current requirements in section 3.2.1 address findability. Accessibility in the FAIR sense is primarily about infrastructure (resolvability of identifiers and permanence of metadata), and there are few existing provisions that fall squarely under accessibility. William observed that some accessibility-related provisions exist elsewhere in the chapter but are subsumed under other headings (e.g. security and access control).
+
+David proposed a practical resolution: add a short single-line provision stating that data are made accessible using HTTP in conformance with WIS standards, rather than restructuring the entire section. This would address Liu Yiming's comment while keeping scope manageable. Liu Yiming and Ge Peng accepted this approach. David will draft the provision and circulate it by email.
+
+==== 2.3.2 Dataset identifiers and scope of section 3.2
+
+David noted that section 3.2.1.1(a), which requires globally unique and persistent identifiers, refers to dataset-level identifiers rather than individual records. Liu Yiming suggested adding clarifying wording to make this explicit.
+
+Peter Thorne proposed changing the heading of section 3.2 from "data" to "data sets and data products" throughout, to avoid conflation with management of individual observational assets and records (e.g. station observations identified by WIGOS Station Identifiers). The team agreed and David began making the change.
+
+Denis raised the question of living/dynamic datasets — where a dataset is continuously updated but retains the same identifier. Ge Peng noted current practice: a single DOI (or equivalent persistent identifier) is maintained for a collection; an access date is used to identify which snapshot was retrieved; some systems additionally generate dynamic identifiers for specific downloads. Peter cautioned against specifying DOIs explicitly, as minting DOIs requires technical capability and subscription arrangements that may not be realistic for smaller NMHSs. Ge Peng clarified that WMO is not prescribing DOIs specifically — a globally unique and persistent identifier need not be a DOI. The team agreed to leave the text as-is following the change from "data" to "data sets", with Liu Yiming's comment marked as resolved.
+
+==== 2.3.3 Community standards for national and bilateral data exchange
+
+Liu Yiming and a colleague had initially suggested changing the term "community standards" in the provision for data exchanged at national and bilateral level. After internal discussion, they concluded that "community standards" is appropriate in this context — it covers standards within a given discipline or community rather than mandating WMO or international standards, which are addressed separately under section 3.2.2.1. The comment was marked as resolved.
+
+==== 2.3.4 Core data licensing
+
+David noted the remaining action to add an explanatory note on why core data licensing uses "should" rather than "shall", and why recommended data requires a mandatory license.
+
+Liu Yiming raised a related question about the scope of "core data": should the definition distinguish between local stations and stations part of international exchange? David clarified that core data under the unified data policy must be internationally exchanged and, for observational data, the stations must be part of GBON or equivalent. Local data not exchanged internationally would not fall under core data as defined. Core climate data includes climate normals, monthly climate summaries, climate reports, and daily reports; recommended data includes World Weather Records and national climate monitoring products. Liu Yiming was satisfied with the clarification and suggested the definition section should reference the WMO unified data policy (Annex I). Ge Peng noted that the reference may already be present; agreed to verify and ensure it is clear.
+
+A URL for Creative Commons in the document was found to be broken. Peter suggested minimising URL references in the document generally as they atrophy quickly; Ge Peng suggested using a shorter, more generic URL. David updated the URL accordingly.
+
+=== 2.4 Chapter 3 review — provenance and traceability (section 3.3)
+
+==== 2.4.1 Provenance and traceability — section 3.3.1.2
+
+Liu Yiming raised concern about the requirement to record "detailed history of processing and changes applied": for gridded products derived from multiple sources (satellite, radar, station data), it may be practically impossible to trace provenance at the individual record level.
+
+William confirmed the original intent was at the record level (e.g. tracking ingest, QC, disaggregation, infilling, homogenization applied to a single observed value). Ge Peng observed that the existing "should" already signals this is a recommendation, and that the provision as worded can be read as applying at both the record and dataset level — an acceptable ambiguity that preserves flexibility. William, Ge Peng, and Denis agreed the provision should remain as-is.
+
+==== 2.4.2 Identification of external data — section 3.3.1.3
+
+William stated that section 3.3.1.3 is not needed as it duplicates what is already covered in section 3.3.1.2. The team agreed to delete section 3.3.1.3.
+
+==== 2.4.3 Observing metadata and practices — section 3.3.1.4
+
+Peter Thorne raised the concern that, for data rescue work on historical observations (e.g. from the 1800s), observing practice metadata would simply not exist. William suggested either making this provision explicitly forward-looking or downgrading it to a "should". Axel Andersson suggested rephrasing to "undertake measures to collect and collate information". Ge Peng supported this framing: the obligation would attach to the act of undertaking measures rather than the outcome.
+
+David noted that the WIGOS metadata standard contains relevant provisions on this topic and proposed simplifying the provision to: "Members shall ensure that entities processing and publishing observational data include the available information on observing practices as part of the provenance metadata." The word "available" is key — it addresses Peter's concern by acknowledging that not all historical metadata will exist. Ge Peng and William supported this. David will update the wording for the next meeting.
+
+==== 2.4.4 Data quality assurance — flagging vs. removal
+
+Peter Thorne raised a principle not explicitly stated in the current text: data quality assurance should flag suspect or erroneous data but should never result in data being removed. He cited the ozone hole as a historical example where removal of flagged data masked a critical scientific discovery. William strongly supported this, noting he had recently needed to explain this principle to the Fiji Meteorological Service, which had a history of deleting data that failed quality control. The team agreed to add a new provision on this principle.
+
+==== 2.4.5 Quality control result metadata — section 3.3.2.2
+
+Liu Yiming suggested that quality control results should be associated not just at the dataset level but also appended to individual records. Peter Thorne proposed simplifying the wording to refer to "associated metadata" rather than prescribing where QC results should sit, leaving the implementation to Members. William agreed: this approach is both simpler and appropriately flexible, and "associated metadata" can apply at both the record and dataset levels. Denis noted that the record vs. dataset distinction should eventually be addressed in data management guidance rather than the Manual, and William suggested this be covered in Chapter 7. David will add cross-references to relevant guidance material. Liu Yiming confirmed that their original suggestion to add specific step codes was withdrawn — after internal review, they concluded it was too detailed for the Manual.
+
+=== 2.5 Chapter 3 review — homogenization and storage (sections 3.3–3.4)
+
+==== 2.5.1 Homogenization
+
+William argued against expanding the enumerated list of processing steps (homogenization, data fusion, reconstruction), as completeness would require adding disaggregation, infilling, and others. The consensus was to leave the existing text broad.
+
+Peter Thorne proposed adding a note encouraging Members to publish their processing and data management methods in the peer-reviewed literature, noting that many datasets rely solely on internal documentation with no external peer check. William agreed, recalling that as a climate data manager he had not documented methods in peer-reviewed literature and later recognised he should have. The team agreed to add a note with "encouraged" language — a note is the appropriate vehicle for this rather than a "should".
+
+==== 2.5.2 Duplicate repositories — section 3.4.2.2
+
+Ge Peng raised a concern about the practicality of the duplicate repositories provision for smaller Members. David noted examples of bilateral duplication in practice: the UK Met Office and CEDA, and DWD and the UK Met Office mirroring voluntary observing ship data. Peter Thorne asked whether submitting to global or regional archives should qualify as duplication, since for smaller NMHSs a global archive serves the same purpose as a bilateral arrangement.
+
+The current provision uses "should" (not "shall"), which the team confirmed is appropriate and should remain unchanged. William recalled that there is a separate statement about duplicate copies in different physical locations elsewhere in the document; Ge Peng was satisfied with this. David noted he will delete the reference to a "data management plan" from the Manual as no such plan exists in this context. William observed that developing a generic WMO data management plan template could be valuable in the future.
+
+=== 2.6 WMO-No. 49 definitions
+
+William raised the question of what definitions from the team's previous contributions have been included in WMO-No. 49. The context is a proposal to be submitted to EC-80, scheduled for June 2026. David noted he has not been involved in those conversations but expects the relevant documents to appear in the near future. William added that the Manual's definitions chapter should cross-reference WMO-No. 49 and the WMO Glossary so that Members are aware of definitions held elsewhere.
+
+=== 2.7 External review — sharing document with other committees
+
+David raised the question of whether to share the current version of WMO-No. 1238 (chapters 1–3) with other standing committees for inter-team review before the May 19th meeting. His WMO colleague (Kruno) indicated that other committees would prefer to receive it sooner rather than later, given their varying meeting schedules.
+
+David proposed to circulate the document by end of week and send an email to the group for members to confirm whether they have concerns about sharing it in its current state. The document would be flagged as a working draft with definitions still to be finalised. Ge Peng agreed, describing it as an inter-team review rather than a formal review. Committees to receive the document: SC-CLI, SC-ON, SC-IMT (to be confirmed). Chapter 6 (marine climate data) will be included as-is with no additional SG1 review.
+
+Denis confirmed he will not be present at the 19 May meeting as he is on leave, but will try to complete his outstanding action by Friday 8 May. Definition discussions are deferred to the final meeting.
+
+== 3. Key Decisions
+
+* Change "data" to "data sets and data products" in the section 3.2 heading and throughout, to avoid conflation with management of individual observational records
+* Add a short accessibility provision referencing HTTP/WIS standards (David to draft and circulate)
+* "Community standards" is the correct term for bilateral/national data exchange provisions — no change required
+* Leave provenance/traceability provision (3.3.1.2) as worded; ambiguity between record-level and dataset-level is acceptable and intentional
+* Delete section 3.3.1.3 as it duplicates 3.3.1.2
+* Update section 3.3.1.4 wording to include "available" and focus on observing practices — David to propose revised text
+* Add a new provision stating that quality assurance must flag data but must never delete it
+* Leave homogenization enumeration broad; add a note encouraging publication of processing methods in peer-reviewed literature
+* Keep section 3.4.2.2 as a "should" — no change
+* Delete reference to a data management plan
+* Share chapters 1–3 with SC-CLI, SC-ON, and SC-IMT as an inter-team (informal) review — David to seek group confirmation by end of week
+* Chapter 6 (marine climate data) included as-is with no additional SG1 review
+
+== 4. Action Items
+
+=== David Berry
+
+*Correct previous meeting summary: provenance metadata IS required in WMO-No. 1131
+*Draft accessibility provision (data accessible via HTTP in conformance with WIS standard) and circulate by email
+*Add explanatory note on why core data licensing uses "should" rather than "shall"
+*Check WIGOS and WIS Manuals re. observing metadata requirements and update section 3.3.1.4 wording
+*Add new provision that QA must flag data but must never delete it
+*Add note to homogenization section encouraging publication of processing methods in peer-reviewed literature
+*Delete section 3.3.1.3 (duplicates 3.3.1.2)
+*Delete reference to data management plan
+*Tidy up Chapter 3 based on today's discussion
+*Send email to group by end of week (8 May) seeking confirmation that chapters 1–3 are ready to share with other standing committees
+
+=== Denis Stuber
+
+*Review sections 3.3.1.3 and 3.3.1.2 and provide input by Friday 8 May
+
+=== All
+
+*Review Chapters 4 and 5 and send comments to the group email address by Friday 15 May (the Friday before the next meeting)
+
+== 5. Date and Time of Next Meeting
+
+*Date:* 19 May 2026
+
+*Time:* Same time (12:00 UTC)
+
+*Purpose:*
+
+* Continue remaining Chapter 3 items
+* Review Chapters 4 and 5
+* Definition discussion deferred to the final meeting
+
+Note: Denis Stuber will not be present on 19 May (on leave).
