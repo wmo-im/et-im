@@ -1,0 +1,169 @@
+= ET-IM-SG2 13th May 2026 Teleconference
+
+13 May 2026 12:00 - 13:30 UTC
+
+== 1. Participants
+
+*Chair:* Ian Edwards
+
+*Participants:* Marcellin Habimana, Charlotte McBride, Patrick Munyoki, Ge Peng, Xavier Perrot, Dwayne Scott, Denis Stuber, Peter Thorne,  William Wright, Liu Yiming
+
+*Secretariat:* David Berry, Washington Otieno
+
+== 2. Summary
+
+=== 2.1 Overview
+
+This meeting covered approval of the 29 April meeting notes, review of open actions, a status update on review contributions received, a document review session covering the quality control section (humidity constraints, internal consistency checks, and data retention policy), discussion of the observable element metadata definition, and planning for the document sharing milestone.
+
+=== 2.2 Review and Approval of Previous Meeting Notes
+
+Ian walked through the open pull request for the 29 April meeting notes in the ET-IM GitHub repository, summarising the key items: section assignments, the document timeline, scope discussion, station grouping, data model, climate products split, and the query performance technical note. Ian confirmed that the sharing milestone (after this meeting) and the end-of-July 2026 final deadline remain unchanged.
+
+During the review, Ge Peng and Denis Stuber both reported difficulty navigating to the correct repository, having followed a link to the WMO-IM GitHub Pages site rather than the wmo-im/et-im repository. Ian walked through the process of watching the repository to receive email notifications for pull requests and other activity, and provided the correct repository link in the meeting chat. Ge Peng confirmed she would save the direct link.
+
+The pull request was approved by the group and merged by Ian during the meeting.
+
+=== 2.3 Review of Actions from Last Meeting
+
+Ian reviewed the status of outstanding actions from the 29 April meeting:
+
+The following were completed or substantially in progress:
+
+* *Chapter assignments* — Largely in place. Patrick confirmed he is reviewing all chapters and was finishing Chapter 8 at the time of the meeting.
+* *Denis's proposed climate products split* — Denis had sent the proposed email earlier the same day.
+* *William's contact with Blair/Simon* — William had contacted the team but had not received a reply by the meeting.
+
+The following remained outstanding:
+
+* *Chapter 1 diagrams (homogenization)* — David had made some changes but had further changes to commit; these will be included in the next PR alongside incoming review comments.
+* *Non-proprietary backup format check* — David confirmed this had not yet been done.
+* *Sharing with non present team members* — Various members have been absent from the online meetigns, Ian asked David to email those members to check their ability to contribute / review the draft document.
+
+=== 2.4 Document Contributions and Incorporation
+
+David reported that approximately 80% of current review comments had been received by email and had not yet been entered into GitHub. His plan is to go through all emails, create or update issues in the cdms-functional-requirements repository, update the document text accordingly, and submit a pull request.
+
+Target for this consolidated update: Monday or Tuesday 18–19 May 2026. Comments received after this meeting will be addressed in a subsequent version.
+
+=== 2.5 INFCOM Summary Document
+
+David confirmed he had shared a draft of the first part of the INFCOM summary document with Ge Peng, Denis, and William. The main document will cover the work of both SG1 (WMO-No. 1238) and SG2 (CDMS functional requirements) and will include recommendations for the next approximately 18 months up to Congress. Ian noted this topic would be discussed further at the next meeting.
+
+=== 2.6 Scope Reminder
+
+At the start of the meeting Ian re-stated the document's purpose, as agreed at the 29 April meeting:
+
+* The document is intended to help Members evaluate and select between available CDMS products.
+* It is intended to help CDMS developers meet a basic, interoperable standard.
+* CDMSs may in future be assessed against the minimum mandatory requirements.
+
+David took an action to create a single slide summarising this for use in future meetings and when sharing the document with external reviewers. Ian and David will also draft a short guidance note for reviewers to accompany the document when it is shared more widely.
+
+=== 2.7 Document Review: Quality Control Section
+
+*Humidity constraints example*
+
+Liu Yiming had commented that a simple humidity constraint (e.g., relative humidity ≤ 100%) should be added alongside the temperature example already in the document. William noted that some operational systems permit slightly above 100% for saturated conditions (CliDE uses 103% as the cutoff).
+
+The group agreed that the temperature example should be prefixed with "e.g." to make clear it is illustrative, not exhaustive. This satisfies Liu Yiming's comment without adding a further prescriptive list, consistent with the minimum requirements approach.
+
+*Internal consistency checks and metadata*
+
+A sentence in the quality control section referenced "full access to station metadata and the complete observation history" as enabling more thorough validation in a CDMS compared to real-time systems. Peter Thorne and Dwayne Scott questioned whether station metadata is actually used in QC practice beyond basic coordinates. Peter noted that the main advantage of post-processing QC over real-time QC is the availability of the full time series (enabling spike checks, streak checks, distributional checks, and record checks), rather than the depth of station metadata.
+
+Marcellin Habimana argued the sentence should be retained as an encouragement to capture comprehensive metadata. The group agreed that this motivation, while valid, should not be embedded in the QC section, and that the paragraph's key point — the distinction between CDMS QC and real-time operational QC — should be preserved.
+
+David updated the text during the meeting to: "where access to the observation history allows for more thorough validation than is typically possible in real-time operational systems." The reference to station metadata was removed.
+
+*Data retention: flagged records must not be permanently deleted*
+
+Ge Peng raised, echoing a comment from Peter Thorne at the previous meeting, that the document should contain an explicit statement that flagged records must not be permanently deleted.
+
+William strongly supported this, citing examples from Pacific Island countries where data failing QC checks had been permanently deleted, including a case where observations recorded in Fahrenheit were treated as erroneous and lost, and the historical precedent of ozone hole measurements that appeared anomalous but turned out to be valid.
+
+Patrick raised the practical question of where the line falls between permanent deletion and acceptable governance (soft delete, archiving, flagging). William described CliDE's approach of moving clearly invalid data to a restricted "dungeon" area of the CDMS, not included in products but preserved for audit and potential recovery. Ian and others agreed that archiving rather than permanent deletion is the correct approach; the data may always be recoverable if an error in judgment is discovered.
+
+Denis noted this is consistent with traceability requirements in recent WMO documentation on climatological practices, which expect a full history of data values and quality flags to be retained.
+
+Agreement was reached that:
+
+* Original observation values must be preserved even when corrections are applied or quality control flags are raised.
+* Governance processes (product generation, data exchange) determine what is included in products, not permanent deletion.
+
+David agreed to add an explicit statement to this effect to the quality control section, linking to the provenance requirement where relevant.
+
+=== 2.8 Observable Element Metadata Definition (Issue #18)
+
+Patrick raised a concern that the definition of an observable element in the document includes "observation height/depth relative to the surface" as part of the element identity. For upper air observations, height varies per observation (not per element), so including it in the element definition would prevent correct representation of upper air data. Patrick drew an analogy with mobile station coordinates, which are associated with the observation rather than the station.
+
+Patrick also raised the question of units: if unit is part of the element definition, a CDMS would require separate element records for the same parameter measured in different units (e.g., temperature in Celsius and Fahrenheit), which is impractical for services without full instrument standardisation.
+
+David agreed with removing observation height/depth from the element definition; this information belongs in the observation record. William agreed in principle but noted the importance of capturing accumulation or averaging period somewhere; David confirmed this belongs in the observation or measurement definition, not the element definition.
+
+Marcellin suggested making the requirements less restrictive rather than deleting items entirely, so that implementers may include additional fields. Patrick confirmed his key concern is that height/depth and unit, as currently written, would artificially multiply element records; the approach of moving them out of the element definition was agreed as the correct resolution.
+
+Patrick confirmed he has a number of further comments and will add them to the relevant GitHub issues after the meeting for asynchronous review.
+
+=== 2.9 Timeline and Sharing Plan
+
+David proposed the following plan:
+
+* *18–19 May 2026:* Consolidated document update (all email comments incorporated) submitted as a pull request.
+* *28 May 2026 meeting:* Review of the updated document; identify any remaining blockers.
+* *29 May 2026:* Final review and any last changes.
+* *1 June 2026 (Monday):* Share the document with the wider ET-IM team and ET-DDS.
+
+Ian emphasised that the question at the sharing stage is whether there are any major errors that must be corrected before sharing, not whether the document is perfect; the document will continue to be improved after wider review.
+
+William noted that a guidance note explaining what is requested from reviewers would be valuable. David confirmed he and Ian would draft this.
+
+== 3. Key Decisions
+
+* Meeting notes from 29 April 2026 approved and merged during the meeting
+* "e.g." to be added before the temperature example in the quality control section to clarify it is illustrative, not exhaustive
+* Reference to "full station metadata" removed from the internal consistency checks paragraph; text revised to "where access to the observation history allows for more thorough validation than is typically possible in real-time operational systems"
+* An explicit statement to be added to the quality control section: original observation values must be preserved even when QC flags are raised or corrections applied
+* "Observation height/depth relative to the surface" to be removed from the observable element definition; this information belongs in the observation record
+* Document to be shared with the wider ET-IM team and ET-DDS by approximately 1 June 2026
+
+== 4. Action Items
+
+=== Ian Edwards
+
+* Work with David to draft a short guidance note for reviewers to accompany the document when shared with wider ET-IM and ET-DDS
+
+=== David Berry
+
+* Incorporate all email review comments into GitHub issues and update the document; target Monday–Tuesday 18–19 May 2026
+* Create a one-slide summary of the document's purpose and scope for use at the start of future meetings and with external reviewers
+* Check whether non-proprietary backup format requirement is already in the document; if not, raise as a GitHub issue (carried over from 29 April)
+* Add explicit statement to quality control section: original observation values are preserved even when corrections are applied or QC flags are raised
+* Update internal consistency checks text to: "where access to the observation history allows for more thorough validation than is typically possible in real-time operational systems"
+* Remove "observation height/depth relative to the surface" from the observable element definition
+
+=== William Wright
+
+* Follow up with Bureau of Meteorology and CliDE team (visiting office Friday 15 May) to obtain quality control comments before the next meeting
+* Send David's scope summary slide to Simon/CliDE team when available
+
+=== Patrick Munyoki
+
+* Add remaining review comments to relevant GitHub issues after this meeting
+
+=== Denis Stuber
+
+* Share the homogenization section with ET-DDS colleague José for feedback (may defer until wider sharing at end of May)
+
+=== All Team Members
+
+* Review assigned chapters and post comments to the corresponding GitHub issues before the next meeting
+* If unable to add comments in GitHub, send feedback by email to Ian or David
+
+== 5. Date and Time of Next Meeting
+
+*Next meeting:*
+
+*Date:* Thursday 28 May 2026
+
+*Time:* 1200 UTC
