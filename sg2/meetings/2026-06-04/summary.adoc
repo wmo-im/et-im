@@ -1,0 +1,229 @@
+= ET-IM-SG2 4th June 2026 Teleconference
+
+4 June 2026 12:00 - 13:37 UTC
+
+== 1. Participants
+
+*Chair:* Ian Edwards
+
+*Participants:* Etna Cervantes, Charlotte McBride, Patrick Munyoki, Ge Peng, Dwayne Scott, Denis Stuber, William Wright, Liu Yiming
+
+*Secretariat:* David Berry
+
+== 2. Summary
+
+=== 2.1 Overview
+
+This meeting covered approval of the 13 May meeting notes, review of open actions, a detailed walk-through of the version 0.4 pull request for the CDMS functional requirements document, a review of the draft INFCOM decision paper, and a brief review of the reviewer guidance slide and notes. The next meeting was confirmed as a combined ET-IM session on 25 June 2026.
+
+=== 2.2 Review and Approval of Previous Meeting Notes
+
+Ian walked through the open pull request for the 13 May meeting notes in the ET-IM GitHub repository, confirming that all items had been covered. The pull request was approved and merged during the meeting.
+
+Ian also closed a long-standing open issue in the ET-IM repository (dating from January 2026) that had asked Members to confirm their GitHub IDs and begin reviewing the repository; this was agreed to be satisfactorily resolved.
+
+=== 2.3 Review of Actions from Previous Meeting
+
+Ian reviewed the status of outstanding actions from the 13 May meeting:
+
+The following were completed or substantially in progress:
+
+* *Humidity constraints and internal consistency checks* — David confirmed these were resolved and included in the version 0.4 pull request.
+* *Data retention* — included in the pull request.
+* *Comments from William/Blair* — William confirmed he had included Blair's comments alongside his own in the submitted review.
+
+The following remained outstanding:
+
+* *Observable element definition (Issue #18)* — David noted this was the only item still requiring resolution. Ian suggested making a note to check the extent to which further updates are still needed.
+* *Non-proprietary backup format* — David confirmed this had not yet been added to the document; it was discussed during the PR walk-through (see section 2.4).
+
+Patrick confirmed that most of his raised issues had been addressed in the current pull request, but asked for one week after this meeting to verify that everything is in as expected. Denis Stuber similarly noted he would review the updated document before the broader sharing.
+
+=== 2.4 Document Review: Version 0.4 Pull Request
+
+David shared a Word document comparison (version 0.3 versus version 0.4 draft) and walked the group through the changes. Ian approved the pull request during the meeting on behalf of the group; the minor changes agreed during the session will be committed before the PR is merged.
+
+The main changes covered were:
+
+*Introduction and figures*
+
+Minor updates to the introductory text, including the correction of "minimal" to "minimum". Figure labels corrected (figure captions had incorrectly appeared in place of figure labels in the previously circulated Word document). Figures updated to reflect "long-term climate data management" in place of "homogenization".
+
+*Conformance classes*
+
+The homogenization conformance class has been replaced by "basic climate computation", which encompasses homogenization and related statistical processing, and has been made a required component.
+
+*Terms and definitions*
+
+A terms and definitions section was added, with terms extracted using an AI-assisted process. David invited review of these terms after the meeting. Two terms discussed specifically:
+
+* *Availability* — defined in the system/service uptime sense (proportion of time a system is operational and accessible to users).
+* *Normalization* — defined in the database/IT sense (transforming incoming data into a standard schema for storage), not the statistical sense.
+
+*Quality control*
+
+Terminology updated to "systematic quality checks" with the word "automated" removed. Text from William added on QC helping identify systematic error patterns and informing QC algorithm design. An explicit statement added at the head of the section that observations must be retained. A reference to the GGOS QC flag scheme added, together with a note referencing WMO-No. 1269 (quality control for climate services).
+
+Denis suggested also referencing the Guide to Climatological Practices, which includes examples of quality flags; David took an action to check and insert a reference if appropriate.
+
+The agreed text for QC trigger mechanisms covers: automatic execution on data ingestion, on-demand execution, and scheduled/batch processing. William's suggestion to add a further trigger category was reviewed and agreed to already be covered by the batch/scheduled option.
+
+Notes added on:
+
+* Range checks: not all checks are relevant for all parameters; references to GGOS and the Guide to Methods of Observation for gross error limits.
+* Neighbor station checks: a note acknowledging that island stations and stations in remote areas may have no valid neighbors for hundreds of kilometres (a point raised by William based on Australian Bureau of Meteorology experience and Blair's comments).
+* SFTP/FTPS should be used in place of plain FTP for internet-facing transfers.
+* Graceful handling of temporarily unavailable resources: retry with increasing backoff intervals.
+* Data completeness monitoring clarified.
+* Drag-and-drop support recommended for manual file acquisition and upload; error notification required if upload fails.
+* Rejection at both the record and file level.
+
+William raised that the note on historical form variety should read "variety" rather than "volume" to reflect countries with diverse historical recording formats and units (particularly relevant for countries with colonial pasts). David confirmed the change: in Recommendation 7, requirement 60, "volume" will be replaced with "variety".
+
+*Derived parameters and climate computation*
+
+The previous "calculation of derived parameters" section replaced by "basic climate computation". Text added explaining the requirement, its regulatory basis (CMS requirements and WMO-No. 1238), and specifying the derived variables expected as a minimum: reduction of pressure to sea level, calculation of dew point temperature and humidity, with provenance metadata documenting how each derived value was calculated.
+
+Denis raised the question of coded-value-to-geophysical-parameter transformation (e.g., Beaufort wind codes, visibility codes, cloud codes). David clarified that this type of conversion is covered under data normalization: incoming data with coded values are normalized to geophysical parameter values as part of the ingestion process; this is distinct from derived/computed statistics.
+
+Denis also suggested adding return period calculation as an explicit example in the statistics section, noting it is one of the most operationally important derived statistics for National Meteorological and Hydrological Services. David agreed and took an action to add return period as an explicit example in requirement 35.
+
+*Data model link*
+
+David had removed a link to the draft data model from the requirements text. On discussion, Ian and the group agreed it would be better to retain a reference to the data model, though not to attempt to include it as an annex (which would raise questions about the separation between model and representation). David took an action to re-insert the reference as a note.
+
+*Metadata management*
+
+References to ISO metadata standards reduced throughout, as these standards are not freely and openly available; WMO cannot include them by reference in a freely accessible specification. The group agreed the relevant concepts are still expressed.
+
+The observable element definition still requires agreement on the appropriate level of detail (e.g., whether "air temperature at 2 m" or "air temperature" is the element; and whether units form part of the element identity). This was identified as the principal outstanding content question.
+
+Discovery metadata updated with a WIS2 example (Brazilian dataset). The requirement to submit metadata records to WIS2 has been changed to a recommendation. The Devoto data policy classification field similarly changed from a requirement to a recommendation, reflecting that not all CDMSs are public-facing.
+
+Data lineage: a metadata record expected for each processing stage, from raw data through to final products.
+
+*User interface and climate products*
+
+Few changes to the user interface section. David noted a cross-reference check against WMO-No. 1238 is still needed, as that document has also been undergoing changes.
+
+Climate products section largely unchanged: climate normals, standard observation products, world weather records, climate messages, daily messages, and recommended indices (temperature, precipitation, SPI, and user-configurable).
+
+*Non-functional requirements*
+
+Non-proprietary backup format requirement not yet added; David took an action to add it to this section. Authorization requirement: one item changed from mandatory to a recommendation. Terminology: "modernization" replaced with "statistical computation" for broader applicability. Audit log updated. Data Quality Manager role expanded to include authority to initiate investigations, resolve quality issues, and identify root causes.
+
+David confirmed the word "normalize" is retained in the data ingestion section where it refers to the IT/database normalization concept, consistent with the terms and definitions entry.
+
+=== 2.5 Draft INFCOM Decision Paper
+
+David shared the draft decision paper for INFCOM. The document follows the standard format: preamble, noting, and operative paragraphs.
+
+Key elements:
+
+* *Preamble:* references Resolution 11 of INFCOM-3, Resolution 23 of Congress 19, and Resolution 8 of EC-78 as the mandate for this work.
+* *Noting with appreciation:* the work of SCIMT in close collaboration with SC-Cly, and the developers of the relevant open source systems (Clyde and MCH to be added).
+* *Takes note:* that the functional requirements define conformance criteria against which a CDMS may be assessed, and that these criteria do not impose mandatory obligations on Members, but provide a common technical baseline for development, procurement, and assessment of CDMSs.
+* *Notes:* the state of the draft data model.
+* *Adopts:* the amendment to WMO-No. 1131 as specified in the annex (the functional requirements are intended as an annex to WMO-No. 1131, not a standalone document).
+* *Requests SCIMT:* to promote the use of CDMSs by Members that are conformant with the provisions of WMO-No. 1131; to support uptake of WMO-No. 1131; and to collect and share evidence of implementation.
+* *Invites Members:* to use the functional requirements in their work.
+
+Ian raised the question of whether the decision should emphasise open source systems specifically, or instead focus on conformance with WMO-No. 1131 regardless of whether a system is open source or proprietary. William suggested wording along the lines of "to promote the use of CDMSs by Members that are conformant with the provisions of WMO-No. 1131." David agreed and will update the text accordingly.
+
+David noted that due to financial constraints, a prioritisation exercise is ongoing at WMO. Some climate work has been assigned a lower priority, which may affect what future work is included in the SCIMT work plan. The future work items (beyond INFCOM adoption of the requirements) are expected to appear in a separate SCIMT work plan document rather than in this decision paper.
+
+David will be co-located with the SCIMT Chair (Rémy) in Brasilia in a week and a half, and may discuss future work and the conformance agenda at that meeting. David also plans to speak with Enrico, noting that the First Mile initiative is developing conformance classes and test suites along similar lines, and that collaboration between the two work areas may be beneficial.
+
+Ian noted that the FOSS (Free and Open Source Software) Guide being developed by a separate task team is reaching a wider review stage, and that it addresses technical quality and fit-for-purpose assessment criteria. David confirmed that conformance classes for CDMSs should align with that framework.
+
+=== 2.6 Conformance Language and Member Obligations
+
+Ge Peng raised a concern that the use of "conform" language in the decision may be perceived by Members as creating new obligations, particularly where conformance test suites do not yet exist. She asked whether the current document is intended to promote awareness of the requirements or to ask Members to carry out conformance assessment now, with formal test suites to follow.
+
+Ian explained that the language of conformance is already in use in WMO surveys asking Members whether their CDMS conforms with WMO-No. 1131, and that the intent is to make it easier to assess conformance more rigorously over time, not to introduce a new obligation. Ian noted the distinction between compliance (externally imposed) and conformance (a declaration by the system or Member) as important context.
+
+Ge Peng acknowledged this but suggested the nuance should be clearly expressed, as not all readers will be familiar with the standards community usage of these terms. Ian agreed, noting that the reviewer guidance document states explicitly that the functional requirements do not place new obligations on Members. David took an action to add a corresponding statement to the reviewer guidance slide.
+
+The group also discussed who would conduct conformance assessments in practice:
+
+* For commercial software: either the vendor or WMO (analogous to OGC certification), with possible cost recovery.
+* For open source software: the community or WMO.
+* For in-house Member systems: the Member themselves, using the functional requirements as the assessment tool.
+
+David noted that the First Mile initiative is exploring a certification process that will be brought to EC as a recommendation; this is consistent with the direction of the CDMS work. Ian agreed that the two streams should be aware of and coordinated with each other.
+
+=== 2.7 Reviewer Guidance Slide and Notes
+
+Ian shared a one-slide summary and an accompanying Word guidance document intended to be circulated with the functional requirements when they are shared for broader review.
+
+*Slide:* summarises in two columns what the document is intended to be (help Members evaluate their CDMS; help CDMS developers meet a basic interoperable standard; provide a reference point for conformance assessment) and what it is not intended to be (a comprehensive specification of all CDMS features; a certification or endorsement of any product; a prescriptive guide for CDMS implementation). The boundary statement at the foot of the slide notes that requirements focus on the minimal mandatory functionality considered necessary for effective climate data management and interoperability.
+
+The group agreed the slide broadly represented the document's scope. Ian noted that the statement that the document does not impose obligations on Members appears in the guidance notes but not explicitly on the slide, and suggested adding it. David took an action to add this to the slide.
+
+*Guidance notes:* explains the document structure and conventions (the modspec "shall/must" keyword distinction — Ian questioned whether the document consistently uses "shall" throughout; David agreed to check this). Covers conformance classes, how requirements are identified, how to submit comments, and the expected scope of review (errors of fact, significant omissions, scope concerns; minor editorial comments welcome but marked low priority). Review deadline: 1 August 2026, giving six weeks for review and approximately one month to address comments before INFCOM submission.
+
+William noted he had placed a comment in the meeting chat with a suggested addition to the guidance notes.
+
+=== 2.8 Document Sharing Timeline
+
+David proposed the following plan for sharing:
+
+* *By end of Friday 5 June (or early next week):* Complete the minor changes agreed in today's session (return period example, data model note, non-proprietary backup format, "volume" to "variety" change, Guide to Climatological Practices reference, reviewer slide update, draft decision update). Share the updated functional requirements, slide, reviewer guidance, and draft decision paper with the SG2 team for final comments.
+* *End of next week (approximately 12 June 2026):* Share the document with the wider ET-IM team and ET-DDS for broader review.
+* *1 August 2026:* Review deadline for external comments.
+
+David confirmed he would be out of the office in Brazil for a week following the sharing.
+
+== 3. Key Decisions
+
+* Meeting notes from 13 May 2026 approved and merged during the meeting
+* A long-standing open GitHub issue in the ET-IM repository (from January 2026 regarding GitHub IDs) was closed as resolved
+* PR for version 0.4 of the CDMS functional requirements approved by the group; to be merged once minor post-meeting changes are committed
+* "Volume" changed to "variety" in Recommendation 7, requirement 60, to reflect the diversity of historical form formats rather than quantity
+* Data model link to be reinserted into the document as a note (not an annex)
+* Non-proprietary backup format to be added to the non-functional requirements section
+* Language in INFCOM decision paper to focus on CDMSs "conformant with the provisions of WMO-No. 1131" rather than specifically on open source systems
+* Review deadline for the functional requirements document: 1 August 2026
+* Next combined ET-IM meeting (SG1 + SG2) confirmed: 25 June 2026 at 11:30 UTC
+
+== 4. Action Items
+
+=== David Berry
+
+* Add reference to the Guide to Climatological Practices for quality flags (check for quality flag examples and insert citation if present)
+* Add return period calculation as an explicit example in requirement 35 (derived statistics)
+* Reinsert the data model reference into the document as a note
+* Add the non-proprietary backup format requirement to the non-functional requirements section
+* Change "volume" to "variety" in Recommendation 7, requirement 60 (variety of historical form formats)
+* Check and standardise use of "shall" vs. "must" throughout the document against the modspec convention
+* Update the reviewer guidance slide: add an explicit statement that the document does not place new mandatory obligations on Members
+* Update the draft INFCOM decision paper: adjust language to promote CDMSs conformant with WMO-No. 1131 (not open source systems specifically); clarify who bears responsibility for conformance assessment
+* Share updated functional requirements document, reviewer slide, guidance notes, and draft INFCOM decision paper with the SG2 team (target: end of Friday 5 June 2026 or early the following week)
+* Share the document with the wider ET-IM team and ET-DDS for broader review (target: end of week of 12 June 2026)
+* Discuss future conformance class and test suite work with Rémy (SCIMT Chair) in Brasilia, and with Enrico, exploring alignment with the First Mile initiative
+
+=== William Wright
+
+* Add comment from meeting chat to the reviewer guidance notes before wider sharing
+* Review the DAYCLI document (deadline: 19 June 2026)
+
+=== Patrick Munyoki
+
+* Review the version 0.4 pull request within one week to confirm all previously raised comments have been incorporated
+
+=== Denis Stuber
+
+* Review the updated document before broader sharing; flag any major concerns to David or Ian
+
+=== All Team Members
+
+* Review the updated document and send any final comments to David within one week (by approximately 12 June 2026)
+* Review the FOSS Guide document, which is approaching wider review stage (link shared by Ian in meeting chat)
+
+== 5. Date and Time of Next Meeting
+
+*Next meeting:* Combined ET-IM meeting (Sub-group 1 and Sub-group 2)
+
+*Date:* Thursday 25 June 2026
+
+*Time:* 11:30 UTC (30 minutes earlier than usual to accommodate a two-hour agenda)
